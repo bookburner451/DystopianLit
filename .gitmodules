@@ -4,3 +4,6 @@
 [submodule "web/vamp"]
 	path = web/vamp
 	url = https://github.com/Flurrywinde/choicescript-vamp.git
+[submodule "web/Quantum High School"]
+	path = web/Quantum High School
+	url = https://github.com/Flurrywinde/quantum.git
