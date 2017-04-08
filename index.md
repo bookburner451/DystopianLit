@@ -1,4 +1,4 @@
 # My Games
-### [mmj](web/mmj/)
-### [vamp](web/vamp/)
-
+### [Green Gold!](web/mmj/)
+### [Vampire High School](web/vamp/)
+### [Quantum High School](web/quantum/)
