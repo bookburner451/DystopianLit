@@ -1,3 +1,6 @@
 [submodule "web/mmj"]
 	path = web/mmj
 	url = https://github.com/Flurrywinde/choicescript-mmj.git
+[submodule "web/vamp"]
+	path = web/vamp
+	url = https://github.com/Flurrywinde/choicescript-vamp.git
