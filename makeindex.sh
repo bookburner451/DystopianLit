@@ -31,7 +31,7 @@ for d in web/*/ ; do
 	gamename=$(basename "$d")
 	containsElement "$gamename" "${folderIgnore[@]}"
 	if [ $? -eq 1 ]; then
-		outputmd+="[### $gamename](web/$gamename/)"
+		outputmd+="### [$gamename](web/$gamename/)"
 		outputmd+=$'\n'
 	fi
 done
