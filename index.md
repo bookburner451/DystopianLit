@@ -1,3 +1,3 @@
 # My Games
-[### mmj](web/mmj/)
+### [mmj](web/mmj/)
 
