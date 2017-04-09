@@ -1,7 +1,7 @@
 # choicescript
-Flurrywinde's version of ChoiceScript (https://github.com/dfabulich/choicescript).
+This is my fork of dfabulich's ChoiceScript project (https://github.com/dfabulich/choicescript).
 
-My choicescript website (nothing but a few works-in-progress I've barely started on, unfortunately): [https://flurrywinde.github.io/choicescript/](https://flurrywinde.github.io/choicescript/). Follow the steps below, and you can have one too!
+**My choicescript website:** [https://flurrywinde.github.io/choicescript/](https://flurrywinde.github.io/choicescript/). (Right now it's nothing but a few works-in-progress I've barely started on, unfortunately. Mostly it's just there to show what one looks like, and if you follow the steps below, you can have one too.)
 
 ## <a name="myadditions"></a>My Additions
 
@@ -21,9 +21,9 @@ First off, git and github have a learning curve. Learning how to them might be h
 
 * **Easy backups:** Always keep a regular backup (I use Dropbox AND a local hard drive), but it's nice that your story will also be saved here on github.
 
-* **Stay up-to-date with the latest Choice of Games codebase:** Just type "git pull" and get the latest version of choicescript.
+* **Stay up-to-date with the latest Choice of Games codebase:** Just load it right in, and all your games will start using it, no muss, no fuss. It will keep your current modifications, if any (like CJW's save system and whatnot), too.
 
-* **Your own website for your games:** You will get your own website with a menu to all your games that's very easy to keep up-to-date. Before this, I had to FTP by hand all the time, and that gets old fast.
+* **Your own website for your games:** You can setup your own website with a menu to all your games that's very easy to keep up-to-date. Before this, I had to FTP by hand all the time, and that gets old fast.
 
 * **Custom choicescript codebase:** I haven't tried this yet, but I plan to have different branches for each feature I add to the choicescript code. You could pick which feature(s) you want and merge it on in, not having to mess with modifying the code yourself.
 
@@ -41,24 +41,24 @@ First off, git and github have a learning curve. Learning how to them might be h
 - **Clone your choicescript fork:** 
   - Go to your OS's command line interface.
   - Go to the folder you want to clone into, like, say, My Documents, or your Dropbox folder.
-  - Type: `git clone https://github.com/[INSERT YOUR GITHUB USERNAME HERE]/choicescript.git` and hit Enter. This will create a new folder called choicescript containing all the code.
+  - Type: `git clone https://github.com/[INSERT YOUR GITHUB USERNAME HERE]/choicescript.git` and hit Enter. This will create a new folder called `choicescript` containing all the code.
 
-- Copy your game(s) into the web folder.
+- Copy your game(s) into the `web/` folder.
 
 - Decide if you want to do things the easy or hard way.
 
 ### The Easy Way: Just keep choicescript and your games together as one big project.
 
-This is the option I would choose if I were just a writer, not a programmer. The downside is it's harder to mess around with the choicescript code if changes to your stories are mixed in too, but if you're not going to mess with the choicescript code much, this is the way to go.
+This is the option I would choose if I were just a writer, not a programmer. The downside is it's harder to mess around with the choicescript code if changes to your stories are mixed in too.
 
-Another benefit to the Hard Way is that each story is also a separate project, so if you're going to do advanced branching and other weird stuff on a project basis, you might prefer the hard way for that too. But if you're just working on one game at a time and don't need to create experimental versions of games and switch back and forth between different branches of your story, the Easy Way is still the way to go, cuz the Hard Way is significantly harder, meaning it's more complicated and might confuse you, especially if you're new to git.
+Another benefit to the Hard Way is that each story is also a separate project, so if you're going to do advanced branching and other weird stuff on different stories at the same time, the hard way would be the way to go. But if you're just working on one game at a time and don't need to create experimental versions of games and switch back and forth between different branches of your story, I would choose the Easy Way, cuz the Hard Way is significantly more complicated and might cause a lot of confusion and hair-pulling, especially if you're new to git.
 
 #### Easy Way Steps:
 - Well, you've got your game folders in the choicescript/web/ folder, so all that's left is to add them to your project.
-- Go to the choicescript folder (or any sub-folder of it), do a `git add -A`. This adds all new and modified files to be "staged." (Staging just means these files are what will be "committed," and "commiting" means packing up all new changes into one unit that has a name and description, but you don't really need to know these details at this point.) Note: If you want to see what your new and modified files actually are, do a `git status`. If you want to know more, google git tutorials.
-- Type `git commit -m "Add game folders" and hit Enter.
+- Go to the choicescript folder (or any sub-folder of it), do a `git add -A`. This adds all new and modified files to be "staged." (Staging just means these files are what will be "committed," and "commiting" means packing up all new changes into one unit that has a name and description, but you don't really need to know these details at this point.) Note: If you want to see what your new and modified files actually are, do a `git status`.
+- Type `git commit -m "Add game folders"`.
 - Type `git push`. 
-- Now your games are uploaded to github, serving as an extra backup.
+- Now your games are uploaded to github, serving as an extra backup and laying the groundwork for version control and your website.
 
 #### Keeping your github up-to-date
 Okay, so say you're going along, writing your story. If you've added a few new parts to a scene, now's a good time to commit and push your changes. Here's what you do:
