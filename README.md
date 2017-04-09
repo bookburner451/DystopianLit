@@ -53,7 +53,7 @@ This is the option I would choose if I were just a writer, not a programmer. The
 
 Another benefit to the Hard Way is that each story is also a separate project, so if you're going to do advanced branching and other weird stuff on different stories at the same time, the hard way would be the way to go. But if you're just working on one game at a time and don't need to create experimental versions of games and switch back and forth between different branches of your story, I would choose the Easy Way, cuz the Hard Way is significantly more complicated and might cause a lot of confusion and hair-pulling, especially if you're new to git.
 
-**UPDATE:** I just thought of an even [EASIER way](#easierway). 
+**UPDATE:** I just thought of an even [EASIER way](#easierway). I think this is the preferred way, as it's much easier but not all that inferior to the old Easy Way.
 
 #### Easy Way Steps:
 - Well, you've got your game folders in the choicescript/web/ folder, so all that's left is to add them to your project.
@@ -147,10 +147,10 @@ You could stop at this point, but what if you want a free website that hosts all
   
 Well, I hope this has helped you get started using git with choicescript. If you have any questions, you can find me on the Choice of Games forum: https://forum.choiceofgames.com/users/flurrywinde11/
 
-**UPDATE:**
+## UPDATE:
 
 ### <a name="easierway"></a> The Super Easy Way
-Okay, this way is even easier but you lose some of the benefits of the Easy Way. You *still* get a free website that easily updates, though. You also still get the, albeit inferior, version-control of the Easy Way. 
+Okay, this way is even easier than the Easy Way, but you lose some of the benefits. You *still* get a free website that easily updates, though, and you also still get the, albeit inferior, version-control of the Easy Way. 
 
 What's missing is easily staying up-to-date with the choicescript code, and of course, all the features of the Hard Way. (But you can still update the choicescript code in much the same way you used to.)
 
@@ -161,12 +161,12 @@ Done that? Good. Now do the following steps:
 - Register on github.com.
 - **Make your user webpage:**
   - Go to: https://pages.github.com
-  - Do steps 1 and 2. (Above Step 1, there's a button that says "Project site". Do NOT press it. Keep it on "User or organization site", because that is what we will be using.
+  - Do steps 1 and 2. (Above Step 1, there's a button that says "Project site". Do NOT press it. Keep it on "User or organization site", because that is what we will be using.)
   - Instead of step 3, copy the contents of your choicescript folder (which should now include your games folders) to the folder you made in step 2. 
   - Then continue on with the rest of the steps.
   - That's it! You now have a website for your games. (Did you get a 404 error? That's normal. Just add `web/[YOUR GAME'S FOLDERNAME]` at the end of the url to get to the games.)
 
-**Optional:** Replace the 404 error with a nice-looking menu by adding an index.md to the choicescript folder. See [The Easy Way](#easyway) for how. (It's the third step in the "Your FREE Website" section. Here's a link to [mine](https://raw.githubusercontent.com/Flurrywinde/choicescript/gh-pages/index.md). Basically just edit that and put it in your choicescript folder.
+**Optional:** Replace the 404 error with a nice-looking menu by adding an index.md to the choicescript folder. See [The Easy Way](#easyway) for how. (It's the third step in the "Your FREE Website" section. Here's a link to [mine](https://raw.githubusercontent.com/Flurrywinde/choicescript/gh-pages/index.md). Basically just edit that and put it in your choicescript folder.)
 
 This will make the frontpage of your website be a menu to your games instead of the 404 error it was probably giving you.
 
