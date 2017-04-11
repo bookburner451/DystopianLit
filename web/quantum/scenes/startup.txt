@@ -1,0 +1,30 @@
+*title Quantum High School
+*author Flurrywinde
+
+*scene_list
+  startup
+
+*create rel_Fozberg 50
+*create rel_Jenny 50
+  
+Welcome to Quantum High School, the multiple choice adventure game that allows you to live out many adventures in parallel realities. 
+
+Fulfill your dreams. 
+
+Get the girl. 
+
+Get your homework done at the same time. 
+
+Yes, all this and more is possible in a world where anything is possible thanks to your ability to shift through other dimensions of time and space... once you figure out how to use it.
+
+It all started in Physics class where you learned about Quantum Mechanics for the first time and couldn't believe it when you heard your teacher, Mr. Fozberg, introduce the idea that according to the latest theories in Physics, nearly infinite alternate universes exist, one for each alternate possibility of every decision or random event that ever occurred. He spoke of how there's a universe where the South won the Revolutionary War, how Kennedy wasn't assassinated, the Titanic never sank, and any other possibility you can think of.
+
+Immediately you began wondering how you could tap into this wondrous phenomenon, so many adventures that could be had, but the question was, "How?"
+
+*choice
+	#Ask Mr. Fozberg
+		*if rel_Fozberg > 50
+			Everybody seems to like Mr. Fozberg, so they all crowd around after class. He's taken an especial liking to you, however, so when he sees you approach, he ignores everyone else. This is great! His answer, however, disappoints you. He doesn't believe there's any way a person could visit any other timeline. Figures, since if standard scientists already knew how, wouldn't you be hearing about it? It'd only be a matter of time before some company would start selling a "quantum jumper," or whatever. You know there must be a way, though. You can feel it. Keep looking.
+			*finish
+		*else if rel_Fozberg > 10
+			Everybody seems to like Mr. Fozberg, so they all crowd around after class. Even though you've done well on your homework and exams, 
