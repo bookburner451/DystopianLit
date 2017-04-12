@@ -1,0 +1,248 @@
+*title Fine Wines & Pickup Lines
+*scene_list
+	startup
+	animal
+	variables
+	gosub
+	ending
+	death
+	
+*create name ""
+*create gender "n"
+*create orientation "s"
+*create lookingFor "f"
+*create goal 0
+*create looks 2
+*create job 2
+*create charm 2
+*create date "No one yet"
+
+*comment Pronouns for the gender you're looking for
+*create guysGirls "girls"
+*create guyGirl "girl"
+*create menWomen "women"
+*create manWoman "woman"
+*create heShe "she"
+*create himHer "her"
+
+You step into Glazer's Bar where tonight a speed dating event is being held, and it's alive with activity, men and women of all ages, some excited, others shy, all here in the hopes of meeting that special someone.
+
+At this point, I'll need to know a little bit about you. First, are you a man or a woman?
+*temp str
+*choice
+	#Woman
+		*set gender "f"
+		*set str "other women"
+		*goto intentions
+	#Man
+		*set gender "m"
+		*set str "other men"
+		*goto intentions
+
+*label intentions
+Very good. Now, are you here to meet ${str} or a member of the opposite sex?
+*choice
+	#Member of the opposite sex
+		*set orientation "s"
+		*goto setPronouns
+	#Member of my own sex
+		*set orientation "g"
+		*goto setPronouns
+		
+*label setPronouns
+*if ((gender = "f") and (orientation = "s")) or ((gender = "m") and (orientation = "g"))
+	*set lookingFor "m"
+	*set guysGirls "guys"
+	*set guyGirl "guy"
+	*set menWomen "men"
+	*set manWoman "man"
+	*set heShe "he"
+	*set himHer "him"
+	*goto goal
+
+*label goal
+Thank you. I feel like I'm getting to know you very well already, but too bad I am just a computer game not interesting in dating anyone at the moment. Until I get a proper emotion chip installed, you will have to resign yourself to the other characters in the story, sad to say. 
+
+Next, just between us, I would like to know your intentions tonight? Think of me as your invisible, virtual confidante on your shoulder. No one, not even the organizers of this speed dating event ever need know your private intentions, but they will of course affect your character and therefore the course of the game. Please select how your character honestly feels:
+*choice
+	#I'm looking for casual fun, maybe noncommital sex if it feels right
+		*set goal "1"
+		*goto getstats
+	#Casual fun but no sex. It leads to relationships which is something I do NOT want.
+		*set goal "2"
+		*goto getstats
+	#To meet people and maybe get into a relationship, but it's not important.
+		*set goal "3"
+		*goto getstats
+	#I want to get into a relationship but need to take it slow.
+		*set goal "4"
+		*goto getstats
+	#I'm ready for a relationship, and if I find "the one" tonight, that'd be awesome!
+		*set goal "5"
+		*goto getstats
+	#I'm lonely and desperate to get into a relationship as soon as possible.
+		*set goal "6"
+		*goto getstats		
+
+*label getstats
+Now I have yet another question for you which might also be a bit touchy, but again, it's very important to answer honestly. It seems that despite all your cultural advancements, your mating programming, being genetic and therefore inviolate (unlike mine which can be upgraded to better suit the times), is often influenced by outer attributes that shouldn't matter like looks, wealth, and charm. In this game, you can't have it all, so please select from the following choices to describe the hand you've been dealt in life:
+*choice
+	#I'm very good-looking and have a decent job, but I might not be the most charming person around.
+		*set looks 3
+		*set job 2
+		*set charm 1
+		*goto getname
+	#I'm average looking and don't make much money, but I make up for it with my high charisma.
+		*set looks 2 
+		*set job 1
+		*set charm 3 
+		*goto getname
+	#I'm not a looker, but I'm well off financially. Charm-wise, I'm average.
+		*set looks 1
+		*set job 3
+		*set charm 2
+		*goto getname
+	#I'm average in all three.
+		*set looks 2
+		*set job 2
+		*set charm 2
+		*goto getname
+		
+*label getname
+Finally, what is your name?
+*choice
+	*if gender = "m" 
+		#John 	
+			*set name "John"
+			*goto bar
+	*if gender = "m" 
+		#Jim 
+			*set name "Jim"
+			*goto bar
+	*if gender = "m" 
+		#Bob 
+			*set name "Bob"
+			*goto bar
+	*if gender = "f" 
+		#Mary Jane
+			*set name "Mary Jane"
+			*goto bar
+	*if gender = "f" 
+		#Dina
+			*set name "Dina"
+			*goto bar
+	*if gender = "f" 
+		#Sara
+			*set name "Sara"
+			*goto bar
+	#I'd like to enter a different name than any of these
+		*label input_name
+		Please enter the name you would like your character to have in this story:
+		*input_text name 
+		Your name is $!{name}. Is that right?
+		*choice
+			#Yes
+				Good. On with the game!
+				*goto bar
+			#No
+				*goto input_name
+*label bar
+*temp drank false
+Welcome, $!{name}, to this month's Speed Date Night at Glazer's Bar! No one welcomes you at the door. It's just you and me, your virtual narrator, who, for all intents and purpose does not even exist other than to have asked you all those questions just now. You can safely ignore me. Really, you can. Go. Go and [i]mingle[/i] or do whatever you primate-descended carbon-based bags of mostly water do when you play the dating game.
+*choice
+	#Get a drink at the bar
+		*goto liquidcourage
+	#Look for the person running the speed dating
+		*goto organizer
+	#Look for hot ${guysGirls}
+		*goto look_moos
+	#Check out your competition
+		*goto look_competition
+		
+*label liquidcourage
+*set drank true
+Ah, liquid courage, always a good choice for times like these when you might get nervous, and just a single drink shouldn't make you look too much like a lush, would it? You certainly hope not, and maybe it even makes you look sophisticated and charming!
+
+You're sipping your drink when a woman wearing a plastered on smile approaches you.
+
+"Hi," she says, all fake-bubbly. "Are you here for Speed Date?"
+
+"I sure am!" you say, all warm, toasty, and liquid-courage-ified.
+
+"Great!" she says, her fake smile never wavering for an instant. After getting your name and checking her list, she tells you how it all works. 
+*goto howWorks
+
+*label organizer
+You can't miss her. She's sitting at a little table near the entrance, fingers flying over the papers attached to a clipboard like she's done this a thousand times, all the while wearing a plastered on smile meant to be welcoming but instead just wreaks, "Fake!" Still, you have no choice--you walk up to the table and get in line.
+		
+When it comes to your turn, you give her your name, and after making sure you're on the list, she tells you how it all works.
+*goto howWorks
+
+*label howWorks
+Basically, you meet a new ${manWoman} for five minutes, then move on, meeting a total of ten new people. After it's all done, you submit a list of everyone you're interested in seeing again, and that's it--you go home. Tomorrow, you'll get an email with a list of all the people where there's a mutual interest, whereupon you can contact them and set up a date. Sounds like fun, right? I see your primate mating rituals have progressed beyond dowries and bonks on the head, but luckily for my amusement, they're still quite funny, at least until I have a proper Social Chip installed.
+*page_break Go to your first five-minute date!
+*goto date1
+
+*label date1
+*temp response 
+*temp gobackto
+*temp minutes 6
+*if lookingFor = "f"
+	*set date "Clarissa"
+	The first girl you meet is a dirty blonde with a shoulder-length, peekaboo haircut. She's in a red business suit and looks very professional, wearing pearl earrings with a golden star around them. She smiles when she sees you and seems friendly, excited to be here. 
+	
+	Her name is Clarissa.
+	*goto date1_choice
+*else 
+	*set date "Curtis"
+	The first guy you meet is blond with short hair combed into a flat top. He looks almost like an aging surfer, probably once drop dead gorgeous, but now he's in a business suit with wrinkles just beginning to form around his eyes. They make him look tired, as if he's stayed up all night, but it's probably just age and stress. His demeanor is type A, however, strong, forceful, but also friendly, a good talker with a powerful voice which sets you instantly at ease. 
+	
+	His name is Curtis.
+	*goto date1_choice
+*label date1_choice	
+*set minutes - 1
+
+You have ${minutes} minutes left on your mini-date with ${date}. 
+
+What do you say?
+*choice
+	*hide_reuse *selectable_if (goal = 1) #Do you want to have sex?
+		*set response "${date}_sex_flat_out"
+		*set gobackto "date1_choice"		
+		*gotoref response
+	*hide_reuse #Are you from around here?
+		*set response "${date}_from_around_here"
+		*set gobackto "date1_choice"	
+		*gotoref response
+	#Politely end this date early
+		*set response "${date}_polite_end_early"
+		*set gobackto "date1_choice"	
+		*gotoref response
+*label clarissa_sex_flat_out
+She throws her drink in your face.
+*gotoref gobackto
+
+*label clarissa_from_around_here
+"Actually, I just moved here from Chicago," Clarissa says, smiling, talking a bit fast but seeming at ease with you. "How about you?"
+*choice
+	#Answer politely and talk about Chicago for awhile.
+		You tell Clarissa where you're from and learn many interesting facts about Chicago, such as how the Chicago River once flowed the other way but got reversed through a feat of engineering. 
+		*set minutes - 2
+		*gotoref gobackto
+	#Answer politely but ask her another question as soon as possible.
+		You tell Clarissa where you're from and say Chicago was nice the last time you visited.
+		*gotoref gobackto
+	#Ask why she moved.
+		"For work," Clarissa replies. "It's a financial planning firm. The chance for a promotion came up, and I took it, even though it meant moving here where I don't know anybody. What do you do, career-wise?"
+		*goto clarissa_career
+*gotoref gobackto
+
+*label clarissa_career
+*choice
+	#
+
+*label clarissa_polite_end_early
+You make small-talk for the rest of the five minutes.
+*goto date2
+
+*label date2

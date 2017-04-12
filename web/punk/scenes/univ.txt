@@ -1,0 +1,190 @@
+You are an ordinary college student sitting in one of your university's giant lecture halls where a couple hundred students just sat through a class on particle physics.
+
+You are gathering your things while the other students are all milling about, talking, or on their way to their next class.
+
+You don't know it yet, but your life is about to get far more interesting.
+
+First, though, what is your name?
+*fake_choice
+	#Steve Decker.
+		*set fname "Steve"
+		*set lname "Decker"
+
+Pleased to meet you, ${fname}!
+
+Now, where were we? Ah, you're still sitting at your desk gathering your things when...
+*page_break
+"Hey, you ${fname} ${lname}?" comes a female voice from behind you.
+
+You turn to see a very tall punk-girl standing in the aisle, complete with spiky purple hair and studded leather jacket. She has earrings all up and down one ear, a couple nose-rings, and really seems to have gone all-out with the punk-style get up. She's quite attractive in her skin-tight leather pants, but her attitude is abrasive. Her tone of voice is abrupt and impatient, and she defiantly stands right in the middle of the aisle, forcing the other students to squeeze by her.
+
+"Well?" she says impatiently. "Are you ${fname} ${lname}?"
+*choice
+	#"Yes?"
+		*goto yessteve
+	#"Who wants to know."
+		*goto future
+
+*label yessteve
+"Good," the girl says,
+
+*label future
+"I'm from the future. Come with me if you want to live."
+*choice
+	#"What is this? An 80's sci-fi movie beginning with the letter 'T'?"
+		*goto terminator
+	#Quickly stuff the rest of your things in your bookbag.
+		*goto hurry
+	#Take your time. This must be some kind of joke.
+		*goto taketime
+
+*label terminator
+Abruptly, the girl turns and starts walking away.
+
+You hear her mutter, "He's not the one..."
+*choice
+	#Get curious. Catch up with her and try to find out what's going on.
+		*goto curious
+	#Follow her from a distance.
+		*goto follow
+	#Shrug and get on with your life.
+		*goto shrug
+
+*label curious
+You manage to hear the girl say, still muttering to herself, "Proper target wouldn't have reacted this way."
+
+The girl glances at you when she notices you catching up with her but merely keeps walking. The two of you exit the lecture hall and are now walking down the school hallway.
+*fake_choice
+	#Ask her name.
+	#Ask why your life is in danger.
+"Get lost," the girl sneers without even looking at you and quickens her pace.
+*choice
+	#Keep up with her.
+		*goto keepup
+	#Get lost.
+		*goto getlost
+	#[i]Pretend[/i] to get lost.
+		*goto pretendgetlost
+
+*label keepup
+Quick as lightning, the girl turns and slugs you in the stomach with her fist!
+
+You learn two things:
+
+1. When this girl says, "Get lost," she really means it, and
+
+2. She must have martial arts training. (Or if she's really from the future, some kind of cybernetic muscle-speed enhancement.)
+
+The blow knocks the wind out of you but doesn't seriously injure. Crumpling to the ground, you watch as the girl disappears while a crowd of curious bystanders appears around you.
+*page_break
+In a few moments, you're able to stand and make it back to your dorm.
+
+You open the door, walk in, and...
+*page_break
+Someone grabs you!
+*page_break
+It's the same leather-clad punk-girl.
+
+"You!" she hisses. "Why didn't you come with me when I told you to?"
+*choice
+	#Punch her. She's just committed Breaking and Entering.
+		*goto punch
+	#Stammer.
+		*goto stammer
+	#Chew her out.
+		*goto chewout
+
+*label punch
+Are you sure you want to punch someone with her martial arts skills?
+*choice
+	#Yes.
+		*goto yespunch
+	#No.
+		*goto nopunch
+
+*label yespunch
+Okaaay, but don't say I didn't warn you.
+
+The girl instantly sidesteps and then uses the momentum of your punch to send you hurling onto the floor.
+
+She quickly closes the door.
+*page_break
+"We missed the first window because of you," she says. "Now we've gotta move if there's going to be any chance at all."
+
+She whips out a small device from her pocket...
+*choice
+	#Jump her.
+		*goto jumpher
+	#Stay on the floor and put a little distance between the two of you.
+		*goto stayfloor
+	#Stand up and ask what the device is.
+		*goto standup
+
+*label jumpher
+Are you sure you want to jump someone with her martial arts skills?
+*choice
+	#Yes.
+		*goto yesjump
+	#No.
+		*goto nojump
+
+*label yesjump
+You never learn, do you?
+
+You charge, attempting to tackle the strange punk girl, but she fluidly moves out of the way, then trips you. You go flying into your desk and hit your head.
+*page_break
+The girl presses a button on her device, and an oval portal in space-time open up right there in your dorm room next to your dresser.
+
+"Get the fuck in, or I'll make you get in," the girl says.
+*choice
+	#Get the fuck in.
+		*goto getin
+	#Do NOT go in that portal or whatever it is no matter what!
+		*goto nogetin
+
+*label getin
+
+*label nogetin
+"What's taking so long?" comes another female voice from the other side of the portal.
+
+This newer voice is higher pitched and far more sexy, while the punk girl's is just plain harsh. 
+
+You try to see what this new girl looks like, but beyond the portal is what looks like swirling clouds of different colored light.
+
+"He's being an idiot," the punk says.
+
+"I'm coming through," the new voice says, and there's something very alluring about it in an other-worldly sort of way.
+*page_break
+
+
+*label nojump
+
+*label stayfloor
+
+*label standup
+
+*label nopunch
+
+*label stammer
+
+*label chewout
+
+*label getlost
+
+*label pretendgetlost
+
+*label follow
+
+*label shrug
+
+*label hurry
+
+*label taketime
+
+
+
+
+
+
+
+

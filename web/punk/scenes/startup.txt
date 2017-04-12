@@ -1,0 +1,13 @@
+*comment *********************
+*comment **     HEADER      **
+*comment *********************
+
+*title The Punk-Girl From Outer Space
+*author Flurrywinde
+*scene_list
+	startup
+
+*create fname ""
+*create lname ""
+
+*finish

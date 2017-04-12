@@ -2,7 +2,7 @@
 *author Flurrywinde
 
 *scene_list
-  startup
+	startup
 
 *create rel_Fozberg 50
 *create rel_Jenny 50
@@ -26,5 +26,5 @@ Immediately you began wondering how you could tap into this wondrous phenomenon,
 		*if rel_Fozberg > 50
 			Everybody seems to like Mr. Fozberg, so they all crowd around after class. He's taken an especial liking to you, however, so when he sees you approach, he ignores everyone else. This is great! His answer, however, disappoints you. He doesn't believe there's any way a person could visit any other timeline. Figures, since if standard scientists already knew how, wouldn't you be hearing about it? It'd only be a matter of time before some company would start selling a "quantum jumper," or whatever. You know there must be a way, though. You can feel it. Keep looking.
 			*finish
-		*else if rel_Fozberg > 10
+		*elseif rel_Fozberg > 10
 			Everybody seems to like Mr. Fozberg, so they all crowd around after class. Even though you've done well on your homework and exams, 

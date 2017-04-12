@@ -1,0 +1,137 @@
+*title The Shimmering Portal
+*author Flurrywinde
+
+*comment opposed_pair intellect vs passion
+*create intellect 50
+
+You come home from school after another long, boring day, with another big load of homework to do. 
+
+You plop down on your bed, needing a bit of a rest before starting your homework, and lying there, you find yourself wishing that life were more like Dungeons & Dragons, where magic was real, where there were worlds to conquer, impossible quests, and damsels in distress. You've played all the MMORPGs, but they just weren't real enough. You want a real world with real people, not just a game.
+
+As you think these thoughts, suddenly you discover that you'd been staring at a strange... what is it, exactly? A [i]shimmer[/i]... that's what it looks like, a little silvery shining sliver on the wall, almost like there was a crack there with a sparkly, magical light on the other side.
+
+*temp shimmer true
+*temp times_watched 0
+*temp times_bored 0
+
+*label shimmer
+What do you do?
+
+*choice
+	#Just keep watching it
+		*label watch_longer
+		*set times_watched +1
+		You watched it ${times_watched} times.
+		
+		*if times_watched < 4
+			Nothing happens. It just sits there, still shimmering.
+			*goto shimmer
+		*elseif times_watched < 5
+			*if times_bored = 0
+				*set times_watched 0
+				*set times_bored +1
+				It was so interesting at first, but now it's just been sitting there doing nothing. You start to get bored of watching it, and you find yourself even beginning to think about your homework. 
+				
+				Suddenly, you notice that it HAS changed. In fact, it's gotten smaller, now about half its size and putting out much less shimmer.
+				*goto shimmer
+			*else 
+				*comment times_bored > 0
+				Frustration arises. Why isn't it doing anything!
+				
+				And then... it just winks out of existence!
+				
+				*goto winked_out
+		*else
+			*comment watched 5 or more times
+			Curious again, you notice the sliver of light grows to its original size, perhaps even a bit larger.
+			*goto shimmer
+	*if (times_watched >= 1) #Worry that it might disappear
+		*goto worry_disappear
+	*if (times_watched >= 1) #Will it to disappear
+		*goto try_disappear
+	#Try to touch it
+		*goto touch
+	#Ignore it and start your homework
+		*goto homework
+
+*label winked_out
+*set shimmer false
+"Noooooo..." you groan, wondering why you just sat there watching it. Wouldn't it have been better to try to touch it at least???
+*choice
+	#Will it back into existence
+		You concentrate hard, but after a long time, nothing happens. It's gone.
+		*choice
+			#Do your homework
+				*goto homework
+	#Might as well start to do your homework
+		*goto homework
+		
+*label homework
+You sit down at your desk and open one of your textbooks, but you can't get that strange shimmer out of your mind. You do your best to get as much homework done as you can
+*if (shimmer) 
+	, but at one point you can't help yourself and check to see if the shimmer is still there. It's gone.
+	
+	*goto dinner
+*else
+	.
+	
+*label dinner
+Later, you have dinner with your parents, but you're still thinking about it.
+
+"What's a matter, son?" your father asks, startling you out of your reverie. "The food not tasting good?"
+*choice
+			#Tell your parents about the shimmer
+				They look at you like you're a little weird, then quickly change the subject. Come to think of it, they never really approved of your interest in fantasy and sci-fi. You finish dinner and go back to your room.
+				*goto bed
+			#Don't tell them
+				Good idea. Best not go blabbing about things that might cause people to question your sanity. You finish dinner and go back to your room.
+				*goto bed
+
+*label bed
+Your room is dark and silent, no sign of the mysterious shimmer. Disappointed, you sit down at your desk again and finish up your homework just in time to brush your teeth and get in bed before bedtime. 
+
+Lying in bed, staring into the darkness, you think about the shimmer again, wondering if it could really be a little bit of magic in this so mundane world? You wonder if maybe now, in the darkness that makes your imagination stronger, you might be more able to will it back into existence?
+*choice
+	#Think about how you like your fantasy worlds better than the real, mundane world
+		In your mind's eye, you find yourself in a landscape of rolling green hills. A unicorn prances in the distance, and a dragon lazily flies by far above.
+		
+		You notice the shimmer's back!
+		*goto shimmer2
+	#Will it back into existence
+		At first your concentration is much better, but after a long time of nothing happening, you get tired and fall asleep.
+		*page_break Next day
+		*goto next_day
+*label next_day
+It was another boring day of school, and now you're back home again. 
+*temp times_tried 0
+*choice
+		#Lie on your bed and try to make the shimmer return
+			*goto try
+		#Forget about the shimmer and just do your homework
+			*goto homework2
+
+*label try		
+You stare at the wall, but the wall stubbornly remains just your plain old wall.
+*label try2
+*set times_tried +1
+*choice
+	*selectable_if(times_tried < 3) #Keep trying
+		*if times_tried = 1
+			You try really, really hard this time, and... nothing. You're starting to think it was all just a figment of your imagination.
+			*goto try2
+		*else
+			It must really have been all in your mind. 
+			*goto try2
+	#Get frustrated and pound your pillow
+		*goto frustration
+	#Give up, get up, and do your homework
+		*goto homework2
+*label homework2
+Well, if there's not going to be any more magical shimmer to investigate, you might as well get some homework done. After all, there'd be no use in letting your grades slip for a quest for a stupid shimmer!
+*goto voice
+
+*label frustration
+You really want that shimmer to come back! "Darn it, darn it, darn it!" you think to yourself, "Why can't something cool and magical happen in your life for once? Why can't life itself be magical like in roleplaying games?"
+
+You throw yourself down on your bed, breathing heavy, and suddenly you realize, the shimmer is back, even larger than yesterday! Now it's about twice as long and slightly wider, and the light emanating from it is slightly brighter.
+*choice

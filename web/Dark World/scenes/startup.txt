@@ -1,0 +1,70 @@
+*comment Copyright 2010 by Dan Fabulich.
+*comment 
+*comment Dan Fabulich licenses this file to you under the
+*comment ChoiceScript License, Version 1.0 (the "License"); you may
+*comment not use this file except in compliance with the License. 
+*comment You may obtain a copy of the License at
+*comment 
+*comment  http://www.choiceofgames.com/LICENSE-1.0.txt
+*comment 
+*comment See the License for the specific language governing
+*comment permissions and limitations under the License.
+*comment 
+*comment Unless required by applicable law or agreed to in writing,
+*comment software distributed under the License is distributed on an
+*comment "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+*comment either express or implied.
+
+*title Dark World
+*author Flurrywinde
+*scene_list
+	startup
+
+*create strength 50
+*create gender "male"
+
+A choicescript whodunnit!
+*page_break
+You're standing just inside the entrance of the Pussywillow Gentleman's Club, your eyes scanning the room, adjusting to the dim, ambient lighting. Soft music plays, and several exotic dancers are on different mini-stages scattered throughout the room, their bodies swaying hypnotically to the rhythm. Men are sitting at small tables, drinking and watching the dancers. Other men are sitting in boothes where strippers who aren't dancing come to talk to them, invite them into a back room for lap dances. You take a moment to think back to how you got the lead that brought you here:
+
+A sixteen-year-old high school student had been kidnapped, and you, a private eye, were hired to find her. Tracing her phone records, you found the kidnapper's accomplice, this 18-year-old drop out from her school. At first he wouldn't talk, but after a few punches he started babbling like a brook. 
+
+"The Pussywillow strip club!" he cried. "It was one of the girls there!" He revealed that she paid him a lot of money (and other benefits) to seduce a fellow student, gain her confidence, whereupon she could be easily kidnapped.
+
+"Which stripper was it?" you asked menacingly, hand balled into a fist, arm cocked for another punishing blow to his face.
+
+"I don't know her name!" he protested. 
+
+"What does she look like?"
+
+"I don't know! I don't know!" You watch his eyes dart frantically to the left and right as he furiously tries to think. "Oh!" he said, relieved. "She was the one with big boobs and a pretty face. Tall, too! The good dancer. If you go there, you can't miss her!"
+
+And now you're here, and all the women you're looking at have a) big boobs, b) pretty faces, c) are tall, and d) seem good at dancing. Geez.
+
+You think about leaving, finding the guy again, and asking him again, but that would be just downright embarrassing, wouldn't it? Plus, he's probably left town by now, taking the money and skeedaddling. You had to promise not to turn him in, knowing the girl's life would be in danger if the police got involved. That's why her parents hired you instead. 
+
+[Put part where name, gender, and stats are input here.]
+
+So... what to do?
+
+*choice
+	#Talk to the bartender
+		You sidle up to the bar, 
+		*if gender = "male" 
+			fitting right in with the other seedy looking "gentlemen."
+			*goto bar
+		*else
+			feeling a little out of place, being the only female patron of this establishment. Your presence seems to make some of the men around you nervous while others are merely curious. A few are undressing you with their eyes, and that's just plain creepy!
+		*label bar
+		You order a drink
+		*finish
+	#Sit at a table and talk to one of the waitresses
+		*if gender = "female"
+			You feel much more comfortable.
+
+		You order a coke. It costs $20. WHAT???
+		*finish
+	#Sit in a booth and wait for one of the strippers
+		The kingdom descends into chaos, but you manage to escape with your own hide.
+		Perhaps in time you can return to restore order to this fair land.
+		*finish

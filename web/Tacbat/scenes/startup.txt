@@ -1,0 +1,29 @@
+*title Battle Quest
+*author Flurrywinde
+
+*scene_list
+	startup
+	
+*create income 2
+*create tax_rate "fair"
+
+*create royal_guard 3
+*create royal_guard_remainder 12
+
+*create spearmen 0
+*create spearmen_remainder 0
+
+You are the monarch of Rel-Aktu, a small fiefdom on the eastern coast of the continent of Glendor. The crown is yours by divine right for you are descended from a long line of kings, and you intend to carry on their traditions to the fullest. Battle brings glory, and so, TO WAR!
+*page_break Meet with your military advisors
+
+Rel-Aktu is predominantly human. Elves, dwarves, orcs, goblins, and trolls live in isolated pockets here and there in areas suited to their race. Relations with all are tense but quiet, basically neutral but with mutual suspicion, distrust, and the occasional raid.
+
+You have three squads of twelve crack human warriors, your royal guard, who fight with sword and shield. Peasants can be conscripted, many with experience as spearmen capable of fighting in a phalanx, though their strength, skill, and bravery often leaves much to be desired.
+
+Tax rate is currently fair, generating a modest income.
+*page_break 
+It is now time to allocate your resources and plan for the coming year. Your ${tax_rate} tax rate allows you to undertake ${income} of the following actions:
+
+*choice
+	#Attempt to form an alliance
+	#Raise an army

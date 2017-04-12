@@ -1,0 +1,156 @@
+*title After the Bomb Was Dropped
+*author Flurrywinde
+
+*scene_list
+	startup
+	
+*create physical 0
+*create mental 0
+*create leadership 0
+*create wealth 0
+*create mike_gang_relations 0
+*create night_light 0
+	
+The world went to hell on March 17th, 2018. 
+
+Nobody knows why, at least not anybody you know, which is not saying much. You were seventeen when it happened, in high school, just a normal kid. Sure, you'd heard about the Middle East and Asia on the news, but it didn't mean much, back in the days when your latest crush or new smartphone model was all you thought about. 
+
+Then one day the big city near where you lived was destroyed, maybe some kind of nuclear blast, but no one even knows that for sure. That was a little over a year ago, and since then you learned just what a thin veneer the illusory sense of security civilization provided, for almost immediately the world became dog eat dog. 
+
+"Hey, kid."
+
+You're keeping watch by a small campfire, leaning against a crumbling concrete pillar of what used to be the library. Last winter, when wood became scarce, you took to burning the books, though so far only the ones of lesser importance. The rest remain where they were, now dusty--nobody has much time to read.
+
+"Yeah, what?" you answer.
+
+It's Bill. Scruffy. Blunt. Poor personal hygiene. He's a little hot-tempered guy no one likes much, but he does well in a fight. That's all that seems to matter these days.
+
+"Boss wants to see you," he says.
+
+"About what?"
+
+Bill seems to take your response as disrespect, and he looms over you intimidatingly. 
+
+"You gonna go see him or what?" he sneers.
+
+You reply:
+
+*choice
+	#"Why should I?" (You're a strong loner type who's thinking about setting out on your own, not liking being bossed around.)
+		*set physical 3
+		*set leadership 2
+		*set mental 1
+		*set wealth 2
+		*set mike_gang_relations 1
+		*goto mission
+	#"You got it. I take it you're taking my shift?" (You don't let Bill intimidate you but also don't incite him further.)
+		*set physical 2 
+		*set leadership 3
+		*set mental 2
+		*set wealth 1
+		*set mike_gang_relations 3
+		*goto mission
+	#"Okay." (You're a little afraid of Bill. You're more of the quiet type who preferred computers to sports in school.)
+		*set physical 1
+		*set leadership 1
+		*set mental 3
+		*set wealth 3
+		*set mike_gang_relations 2
+		*goto mission
+	
+*label mission	
+*rand night_light 1 4
+"Why does everything always have to be a fight with you?" Bill says irritably, but you're gratified to see that he doesn't continue his attempt at intimidation.
+
+You get up, reluctant to leave the warmth of the fire, but it's actually not too cold tonight. Spring is just beginning to shift into summer, and you're glad warmer weather is coming. The hardships of last winter are something you're glad to see behind you.
+
+Bill takes your place by the fire, eyes scanning the shadows around the library. 
+*if (night_light < 3)
+	It's a dark night, cloudy, and the moon hasn't yet risen. You couldn't see much, but you were confident you'd hear anyone coming from quite far off. So far, it'd been dead silent.
+	*goto endif
+*else
+	It's a clear night with the moon high in the sky. You'd watched for movement, but so far there was none.
+	*goto endif
+*label endif	
+
+You head to the boss's room, a little office in the back of the building, the only private living space in what is now your group's headquarters. Everyone else lives and sleeps out in the library's main room.
+
+You were mostly just being contrary, never serious about refusing the boss's request. He's a good guy. Mike. Mid-forties. Veteran of the first Gulf War. If it weren't for him most of the people here would either be dead or eeking out a miserable existence in the rubble. You had. After food ran out in your hometown, you came here, alone, for your parents and sister died of pneumonia that first bitter winter. You barely survived yourself before falling in with Mike's little gang, and though life wasn't all that much better, at least there's safety in numbers.
+
+You knock on Mike's door.
+
+"Come in," is Mike's curt reply, and when you enter, you make sure to open the door slowly, show your hands. Mike's funny that way.
+
+The room is lit by candles, and Mike's sitting at the desk, facing you, hands hidden in his lap. You know he's probably holding his revolver, not because he doesn't trust you, just that it's always in his lap when he's alone in his room.
+
+"Close the door," he says. "Have a seat." He gestures toward his cot, the only other place to sit in his cramped but spartan quarters.
+
+"Dave's giving us a run for our money, ain't he?" Mike says without further preamble.
+
+Dave is the leader of the other gang in the area, larger than Mike's, better armed and with more experience. The two gangs gave each other wide berth all the time you've been here, but suddenly last week, Dave seemed to become intent on wiping yours out for no known reason. You've been holed up in the library for days, unable to scrounge for supplies like before, and if it weren't for the security of the library's thick stone walls, you'd probably all have been routed by now.
+
+"You think we have a chance?" Mike says, looking you square in the eye with a challenging tone in his voice, as if the question is a test of some kind.
+
+*choice
+	#"We've held 'em off so far. We'll be fine."
+		"You really think so?" Mike chuckles. "Do you know how many people we lost today? Five. Two dead. Three wounded, and with our water and medical supplies running out, two might not make it. We might've got one of Dave's guys. Maybe."
+		*choice
+			#"I have faith in you, sir. We've survived so far because of you!"
+				"I like your attitude, soldier," Mike laughs. "You'll need it if you decide to accept the mission I'm about to give you."
+				*goto mission2
+			#"We must be in pretty bad shape for you to be talking like this."
+				"I'm just being honest," Mike says. "Something's gotta be done, and I have a crazy idea. I've been sitting here all night wracking my brains, and I came up with a crazy plan, one that will be up to you, alone, to carry out. Are you in?"
+				*goto mission2
+	#"I don't know; you tell me."
+		"I shouldn't have to tell you. Don't you have eyes? Can you count? It's only a matter of days, a week tops, before we're overrun. We gotta do something and do it quick. Whaddya think? Should we surrender?"
+		
+		You wonder if Mike's joking, but his facial expression is dead serious.
+		*choice
+			#"Hell no!" You've heard the stories. Dave beats and even kills his own men to keep them in line, and he considers all women his personal harem.
+			#"Well, he might let us join him. We won't starve at least."
+			#"There must be other options?"
+			#"You're joking... aren't you?"
+	#"I gotta be honest, Mike. It's looking pretty grim."
+		"Oh really?" Mike snaps. "That bad, huh? Well, what to you suggest, smart guy?"
+		*choice
+			#"Sorry, sir! I didn't mean it that way."
+			#"I don't care what you guys do. If you're talking like this, it seems like a good time for me to strike out on my own, jackass."
+			
+		goto mission2
+		
+*label mission2
+You step into the darkness outside Mike's quarters. The library's quiet, everyone asleep, but your heart is pounding in your chest. "All these people here," you think to yourself, "Are counting on me." You find yourself imagining what this room would be like if all of them were dead, and a chill runs up your spine, making you shiver violently. It's best not to think about such things.
+
+You thread your way through the sleeping bodies to your little area to collect the possessions you want to take with you. 
+
+Greg, another guy who'd be a senior in high school if there still was such a thing, is sleeping nearby. He jerks awake, hand reaching for his rifle, but he relaxes when he sees it's just you. 
+
+"Hey, aren't you supposed to be on watch?" he asks worriedly, almost accusingly, as he glances toward the front door. Everyone's nerves are on a hair trigger since Dave's relentless attacks began.
+
+"Don't worry," you reply. "Bill's out there. I'm leaving. Mike gave me a mission."
+
+"Now? In the middle of the night? What mission?"
+
+*choice
+	#Tell Greg
+		*goto mission3
+	#Be evasive. It is, after all, a secret mission.
+		*goto mission3
+	#Tell him it's none of his business
+		*goto mission3
+	#Brag
+		*goto mission3
+		
+*label mission3
+After stowing your possessions in your backpack, you look around, making sure you're not forgetting anything. Nothing comes to mind.
+
+"I guess it's time to go," you say, talking to yourself in a vain attempt to calm your nerves.
+
+*choice
+	#Climb out a window
+		*goto mission4
+	#Go out the front door
+		*goto mission4
+		
+*label mission4
+You thread your way through the deserted, rubble-strewn streets. The larger streets are more passable but chances of an encounter are higher. 		
