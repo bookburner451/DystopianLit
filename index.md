@@ -1,7 +1,7 @@
 # My Games
 ### [**Vampire Life: A High School Vampire Story**](web/vamp/) - High school is hard... especially when you're a vampire.
 
-<div style="margin-left:4em;">**WiP Thread on the Choice of Games Forum:** [https://forum.choiceofgames.com/t/vampire-life-a-high-school-vampire-story/](https://forum.choiceofgames.com/t/vampire-life-a-high-school-vampire-story/1669)</div>
+<div style="margin-left:4em;"><b>WiP Thread on the Choice of Games Forum:</b><a href="https://forum.choiceofgames.com/t/vampire-life-a-high-school-vampire-story/1669">https://forum.choiceofgames.com/t/vampire-life-a-high-school-vampire-story</a></div>
 
 ### [Green Gold!](web/mmj/) - Own your own business! Get rich! Or crash and burn...
 ### [After the Bomb Was Dropped](web/apoc/) - Explore the dog-eat-dog world of ruined, post-apocalyptic city.
