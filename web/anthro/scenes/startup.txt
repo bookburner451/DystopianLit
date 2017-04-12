@@ -1,6 +1,9 @@
 *title Search Across the Galaxy
 *author Flurrywinde
 
+*scene_list
+	startup
+
 Deep-Space Probe R47 - Operation: Humanity Search
 
 Summarized Log:
