@@ -1,0 +1,28 @@
+*page_break
+*achieve squareone
+You wake up to the sound of people flying down the highway, blaring their horn
+as they swerve between cars that aren't moving fast enough for them. You sigh.
+
+You'd think you would've gotten used to the sound of racing cars and people 
+talking about nothing after all these years, but it still feels so... empty.
+Nothing seems to do it for you, except reciting books and writing them down, 
+hiding them even though you're the person people hide books from now.
+
+First thing you did when the city was fully stablized was set up a firefighting
+station. Of course, its intitial purpose was to put out any potential fires, 
+since the new tech you've put into the place can be a bit buggy sometimes. But
+over the next few months, you started to get reports on houses containing
+contraband. When you ignore them, you start receiving reports of houses
+being burned down by firemen.
+
+At first you move to stop them, thinking that's what your people wanted. But
+it soon became clear that those who wanted peace over freedom far outnumbered
+those that didn't.
+
+Either you followed the majority or you lost your cushy little setup as their
+leader.
+
+The new books burned (people had started writing them down from memory, the 
+fools), and the people cheered.
+
+*goto_scene ending

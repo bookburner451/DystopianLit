@@ -1,0 +1,56 @@
+*page_break
+It's been a long journey to get to the top, but you've made it. The world is a utopia, for your at 
+least. You are in charge of a world where everyone is equal -everyone gets paid the same amount
+for any job, everyone gets the same social programs, the same opportunities, and everyone gets 
+treated equally. All you have to do is sit around and tell them what to do.
+
+Of course, that means you should get something extra. Maybe a few extra rations of hot water when you
+want them. Or a few extra vacation days. Or nicer furnishings for your home. In any case, you've 
+earned it.
+
+But then, the healers feel like they should get something extra, too. They save lives every day, you
+know.
+
+But if the healers get something extra, then everyone should get something extra.
+
+But if everyone gets something extra, then it isn't extra.
+
+Hmm.
+
+It kind of sounds like a slippery slope to go down. You decide you aren't going to give anyone else
+extras of anything. Any extras will go to you and be used as you see fit.
+
+Some people might complain, but what do they know? You're their leader, after all. If they don't 
+want you making executive decisions, they shouldn't have you in charge.
+
+Who knows? In a few years, maybe you won't be.
+
+*if (boldness < 50)
+	*goto staycontrol
+*else
+	*goto losecontrol
+*label staycontrol
+*page_break
+But, as it stands, you are able to subtly navigate your people over the next few years to make them 
+blame any complaints they may have on some party of your choosing, or sometimes just each other.
+
+No one manages to figure out your manipulations, and those that do are silenced one way or another.
+
+Congrats. You managed to take a potential utopia for everyone and make it all about you.
+*goto_scene ending
+*label losecontrol
+Indeed, your people start to wise up to the fact that in a world of equality, you seem to be doing much better than
+everyone else. They give you an ultimatum: change or leave.
+
+Well, you aren't going to give up without a fight, are you? 
+*page_break
+Of course not!
+
+You stand your ground, telling them you are leader, and as such are entitled to certain benefits.
+
+If you thought that was going to convince them, you were wrong. Soon, it's a revolution, with you on one side and
+literally everyone else on the other. You don't make it out alive, unfortunately, but the ideas you stand for do.
+Or, at least, the ones that everyone else agreed with. That you didn't follow at all. 
+
+Too bad.
+*goto_scene ending

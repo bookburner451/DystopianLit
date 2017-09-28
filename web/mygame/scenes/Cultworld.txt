@@ -1,0 +1,40 @@
+*page_break
+([i] Several Years Later [/i])
+You kneel in front of the priestess, decked out in hand-stitched, black, ornamented robes, as a crown is placed upon
+your head, a metal band of solid steel that fits snugly around your head. You stand slowly as the woman continues
+speaking about the wonderful things you've done for society, and how you forever cast out the evil workings of 
+technology, the one true destroyer. You don't move a muscle, because if there's anything these people value, it's
+prose and propriety.
+
+You know, other than mirrors.
+
+So you let the woman talk, singing your praises as the crowd filled with varying levels of devotion listen in
+silence. Then it's finally over.
+*page_break
+The priestess dismisses her flock to go read in a mirror until mealtime. You, being leader, don't have to listen
+to her every word. Of course, you respect the power of the Mirror People, given their rather fast rise to power
+following your refusal to create new technology, resulting in beseeching their help to prevent a mutiny. However,
+you have better things to devote your time to, one that no one in the entire community would ever question or
+debate.
+
+You're writing down stories.
+
+Every single one that you can remember gets written down into a master copy that the priestess and her most 
+trusted pupils handle and sort into their ever-growing library.
+
+These books you're writing, how are you handling them?
+*fake_choice
+	#I'm writing my name as the author, so that in the future, people will think I wrote them all.
+		Huh. Very bold of you. Indeed, in a century or so, everyone will forgot the true authors and just assume it was always you who wrote such a broad array of books, with different genres, time periods, styles, tones, and everything else. Way to achieve lof.
+		*achieve youwroteit
+	#With the utmost care, making sure every little detail is correct.
+		Of course you are. But no one's gonna remember that in a hundred years, are they?
+*page_break
+*achieve thebard
+As you write your stories, the Mirror People gain even more promience as the world's finest scholars. Sure, their
+whole mirror philosophy/shtick might be a little overrated, but they keep everyone informed and as enlightened as 
+they can. Not bad for a bunch of crazies, but even if it was, it's too late to stop them. The Mirror People
+acquired enough pull to last for another millenium.
+
+Hope you're happy with that.
+*goto_scene ending

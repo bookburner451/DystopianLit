@@ -1,0 +1,50 @@
+*page_break
+When the first surrogate chamber was produced, your people rejoiced. No longer would women have to suffer through
+the pains of childbirth, and children could be produced to the parents' exact specifications. 
+Everyone was happy, and they had you to thank for it.
+
+Over the next few years, you begin to recognize a problem with the system. If every child is engineered to be 
+smart, beautiful, strong, and everything else a parent wants for their child, then who will be around to do the 
+boring, often gross tasks. There's a need for sanitation workers, but if everyone has the capability to be a
+world-renowned whatever, why would they choose to be a world-renowned trash collector?
+
+Answer: they wouldn't. 
+
+So while for now you've got plenty of average people to do average jobs, when those people die off, and their
+extraordinary children are left behind, society will undoubtedly collaspe.
+
+Naturally, you being you, you come up with a compromise.
+*page_break Drum roll please...
+You set a certain number of children to be born into five different castes, each one assigned a different job
+and life selection based on their genetic traits bestowed upon them. Of course, the final decision is up to them,
+but they are limited to the specific set of options for your caste.
+
+This works splendidly for a while, but then you are presented with another problem: what if someone doesn't like 
+their caste? Some of the higher-up caste people might be bitter that they are tasked with the more difficult
+jobs like being doctors or lawyers or metaphysicians, and some of the lower-castes might think it's unfair that
+they weren't given the same benefits as the higher-castes and are then forced to work lowly jobs for the rest of
+their lives.
+
+A real problem, but luckily, you have a real solution.
+*page_break What could it be, I wonder?
+*achieve acourageousfreshplanet
+You realize that telling people that they should be happy with their caste likely isn't going to convince them.
+Suggesting it and making it seem like it was their idea to be happy, on the other hand, is one of the oldest
+persuasion tricks in the book.
+
+You decide to set up sleeping chambers for the different caste children. The chambers will be hooked up to 
+speakers with pre-recorded tracks that activate when the children are asleep, telling -[i]reminding[/i]- them 
+that they are happy as their caste because being a different caste would be terrible for whatever reason. 
+
+So you've got the children covered, but what about the adults? You've got to make sure they aren't unhappy. Not
+consciously, at least. Which is precisely the solution.
+*page_break What will you think of next?
+Amos pills! If people are ever feeling sad or frustrated or even just plain bored, they can pop a couple of Amos
+pills and take a vacay from the real world. A sure-fire solution to creating a content herd (you tested the pills on
+farm animals, obviously), especially when you add an addictive element so that once you take one it's nearly 
+impossible to stop, or even want to stop.
+
+A perfect plan for a perfect world.
+
+Great job.
+*goto_scene ending

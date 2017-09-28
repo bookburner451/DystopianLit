@@ -1,8 +1,35 @@
-This is a stats screen!
+*temp full_name
+*set full_name (name & " ") & lastname
 
 *stat_chart
-  percent Leadership
-  opposed_pair Strength
-    Weakness
-  text Leadership
-  text Strength
+	text full_name Name
+	text Career
+	text Location
+
+[b] Personality [/b]
+*stat_chart
+	percent Humanity
+	percent Charisma
+	percent Intelligence
+
+[b] Leadership [/b]
+*if leader = 1
+	*stat_chart
+		opposed_pair control
+			Loved
+			Hated
+		opposed_pair boldness
+			Subtle
+			Bold
+		opposed_pair Techy
+			Tech-Savvy
+			Technophobe
+*stat_chart
+	text badworld
+	percent BNW
+	percent Orwell
+	percent Bradbury
+	percent anarchy
+	percent communism
+	percent republic
+	percent dictatorship

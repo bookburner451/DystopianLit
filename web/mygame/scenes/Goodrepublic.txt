@@ -1,0 +1,13 @@
+*page_break
+You answer to a council of elected officials who all make decisions with their
+people in mind. During every election without an incumbent member, you make sure 
+all the candidates have integrity, are kind, honest and all the things that
+should be present in person with a position of power, or you make sure there's 
+no chance they'll ever see a public office. 
+
+Working together with the council is a breeze, because you all essentially want
+the same thing: whatever's best for the people. You all manage to get along, and
+even when you disagree with each other, every respects the other's viewpoint.
+
+Well done.
+*goto_scene ending

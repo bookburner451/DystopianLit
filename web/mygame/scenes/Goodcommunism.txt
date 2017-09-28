@@ -1,0 +1,16 @@
+*page_break
+With hard work and a little bit of luck, you are able to create a system where
+everyone does their part in the community so that everybody is treated equally.
+
+Everyone gets to choose the top three jobs they want, provided they meet the 
+educational requirements for it, and based on need you select who goes where
+and who can do what. Also, for all the less-than-desirable tasks, you have
+able-bodied people on a rotation system, so that everyone has to take out
+the trash sometimes, but nobody is doing it for the rest of their lives.
+
+For a long time after your death, your society flourishes, unbothered by any
+form of corruption, greed, or other human vices. Quite the miracle.
+
+Well done.
+
+*goto_scene ending

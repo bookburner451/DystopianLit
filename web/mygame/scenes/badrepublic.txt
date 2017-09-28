@@ -1,0 +1,18 @@
+
+Congratulations! You've created a republic, a place where, theorectically,
+everyone can have a say in choosing people to make 
+decisions that affect the whole. In a perfect 
+world, it could be considered utopic...
+
+Unfortunately, your choices indicate that any goverment you would create would 
+be corrupt.
+
+See: 
+
+www.cnn.com/politics
+
+(or just search President)
+
+for an in-depth look at how corrupt your government structure ended up after 
+you were done with it.
+*goto_scene ending

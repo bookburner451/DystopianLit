@@ -1,0 +1,9 @@
+*page_break
+Once everyone is completely settled into their new lives, you slowly begin
+to withdraw your leadership pull from society until there is nothing left but
+a distant memory. From now on, people are left to their own devices, and as
+long as everyone treats each other fairly -which they do- you do nothing to 
+interfere. It's a lovely little system, one that promotes systemlessness, and 
+you're proud to have been the one to create it.
+
+*goto_scene ending

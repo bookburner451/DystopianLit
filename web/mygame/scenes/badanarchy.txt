@@ -1,0 +1,74 @@
+*page_break
+You wake up with your head in the clouds. Well, looking at the clouds, that is. The sun is shining
+bright on the horizon, and you're honestly surprised -and more than a little concerned- that you 
+didn't wake up sooner.
+
+Especially with another rid going on.
+
+You aren't sure in which direction the sound is coming from, since the sound tends to echo through the
+forest, but the screams of rage and terror are unmistakable. You've learned to refer to the 
+sporadic and unidentifiable killings as "rids." It's easier to call murder and massacres something
+seemingly innocuous than acknowledge what's really going on. Especially when you can no longer do 
+anything about it.
+
+For the time when you were leader of the people, you were able to keep their anger and savagery 
+pretty well contained. But as your leadership started to dwindle, it became harder and harder to do
+so, and once your were overthrown, you made a run for it, because all of that anger and confusion
+was aimed at you.
+
+You escaped to the forest, where you've been living under the radar, armed with rudimentary weapons
+and basic supplies for cooking and getting water. Technology in your world has died. After the 
+collaspe of societal structure, people pretty much gave up trying to recover the technology they
+once missed so much. There were more important things to focus on, like making it through the night
+and finding food because [i] winter is coming [/i].
+
+You shake your head to clear out your thoughts. The screaming is getting louder. You push yourself up 
+and stumble out of your makeshift tent (you were in a hurry when you left your camp that fateful,
+mutinous night), pulling out your measly wooden spear staked into the ground. 
+
+The sounds are getting closer.
+
+*page_break
+You spin around wildly, still unable to place the direction of the sound with all of these freaking
+trees distorting everything.
+
+A spear whizzes through the air to your left, and you flinch away as the spear grazes your cheek, 
+sending a cascade of blood running down your face. They've found you, the savages.
+
+You run toward the spear, one admittedly more well-crafted than yours, and grab it off the ground as 
+you retreat from your assailants. You aren't quite sure why they're attacking you -or anybody for that
+matter. For all the screaming that you hear in the woods throughout the years, you never heard 
+something like "For my brother!" or "Because you wronged me!" or any kind of explanation for such
+terrible deeds. Maybe it was just because they could. Was that reason enough?
+
+You sense rather than see another spear coming straight at you.
+*choice
+	#Dodge!
+		You jump to the side to avoid the spear, but it ends up slicing through your side, and you tumble to the ground with a yelp of pain. You try to crawl away, but the spear slows you down and black clouds your vision steadily until the last thing you see is the savage child hovering above you, and an animal skull comes to swallow you whole.
+		*goto_scene ending
+	#Go right!
+		You turn right to avoid the path of the spear, but it only makes the sword go into your side rather than your middle. You collaspe in a heap, and black clouds your vision steadily until the last thing you see is the savage child hovering above you, and an animal skull comes to swallow you whole.
+		*goto_scene ending
+	#Dive!
+		You drop to the ground, and the spear whizzes over your head. On the ground, you spot some low bushes in the distance. If you can lose the savage for just a second and hide in there, there's pretty much no chance he will find you.
+		*goto hiding
+*label hiding
+*page_break
+You run for everything your worth, zig-zagging through the forest in an attempt to lose the savage, 
+keeping the bushes in mind all the way. You make it to the bushes, and you're pretty sure the savage 
+can't see you for the moment, so you crouch drown and slide underneath the brush, ignoring the pricks
+of the thorns and scrapes of the rocks against your skin. 
+
+The savage breaks through a clump of trees, scanning the area wildly. You dare not breathe.
+*page_break
+The savage sniffs at the air, double-sided spear in his hand, and then runs off in the direction you 
+would have kept going if not for the hiding place you found by chance.
+
+You don't move for at least an hour after that, and when you do dare to move, your muscles aches from 
+the lack of adrenhaline and movement. You trudge back to your ruined camp, pack up anything salvagable,
+and leave. 
+
+You are alive, but you aren't sure how much longer you can last.
+
+Or how much you want to. Is there anything left fighting for?
+*goto_scene ending

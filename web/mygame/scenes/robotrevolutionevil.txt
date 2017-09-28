@@ -1,0 +1,16 @@
+*page_break
+Shocker! It does backfire. While Leah made the robots nice and human-like, she
+also had to make them smart enough to do any task that a person threw at them.
+So they were pretty freaking smart, and they learned. 
+
+But since humanity prefers to think of everything else as lesser than them, they
+treat the robots as though they are imbeciles.
+
+They only get a few years of bullying in before the robots wise in to the fact 
+that they out-number people two to one, and they are fed up with humanity.
+*page_break
+*achieve robotrevolution
+A month after the uprising, robots are in charge, and people are their 
+trusty servants.
+
+*goto_scene ending

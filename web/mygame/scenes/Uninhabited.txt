@@ -1,0 +1,403 @@
+*achieve backtobasics
+*set leader +1
+*set location "Middle Of Nowhere"
+*set career "Camp Leader"
+Everybody seems to be in agreement with you, so the next day you all pack up camp and move to another,
+though hopefully much improved spot in the wilderness. 
+
+After a couple days of migrating, you stumble upon a huge lake, so clear you can see straight down to
+the bottom, and more trees than you could ever hope to count in your lifetime. The place is perfect, 
+and when you say so out loud, everyone agrees with their de facto leader and sets up camp again.
+*page_break
+However, as perfect as this new camp seems, you realize their are two things missing: shelter for the
+people without tents, and food. You look up at the sky and see what look like storm clouds 
+approaching -even the people with tents will get drenched in that. You look around and here people
+complaining about splitting up the last of the food. There isn't enough for everyone to have even
+a crumb. It's up to you to decide what to do about this.
+*choice
+	#Delegate people to certain tasks to find food and shelter, choosing a leader for each endeavor.
+		*set republic %+25
+		*goto delegate
+	#Prioritize between food and shelter and lead both. You can't trust other people to get the job done right.
+		*set dictatorship %+25
+		*goto leadboth
+	#Have everyone go off to gather and search for their own supplies, and then have everyone bring their findings back to be dispersed.
+		*goto splitoff
+*label delegate
+You call for everyone's attention and announce your plan. Everyone seems to nod in agreement with it.
+You ask for volunteers to lead.
+
+Only two people raise their hands. Exactly as many as you needed, but not quite the number of options
+you'd hoped for. 
+
+Your two choices are Evangeline, a smart, resourceful girl who has always been eager to help, if a 
+little on the arrogant side and Warren, a cookie-cutter buff guy who, while smart enough, lacks... 
+common sense is the kindest way to put it, I suppose. He means well enough, but he once thought that
+the point of [i] Animal Farm [/i] was to prove that humans weren't the only intelligent forms of life.
+
+Not quite, buddy. Not quite.
+*page_break
+Well, with such splendid options, who will you pick to do what?
+*label shelterfood
+*choice
+	#Evangeline will lead the food gatherers while Warren and his group will look for shelter.
+		*goto goodfood
+	#Evangeline will lead the group looking for shelter while Warren and his group gather food.
+		*goto goodshelter
+	*disable_reuse #I don't love these options. I'm going to make my own choices and pick the people I know are best suited for the job
+		*if (control > 50)
+			*goto goodboth
+		*elseif (charisma > 55)
+			*goto goodboth
+		*else 
+			*goto noboth
+*label leadboth
+You decide if something is going to be done right, you need to do it yourself. But you can't lead
+both at the same time, so which task will you focus on first: food or shelter?
+*choice
+	#Food first, then shelter
+		*goto leadfood
+	#Shelter first, then food
+		*goto leadshelter
+*label splitoff
+*if (communism > 30)
+	*set communism %+25
+	*goto successboth
+	*goto fire
+*elseif (humanity > 75)
+	*set communism %+30
+	*label successboth
+	Everyone pitches in and looks for both food and shelter. One person stumbles across a cave big enough for everyone, and that with the plethora of food everyone brought back makes for a successful day. When the storm hits, everyone is safe, dry, and goes to bed with a full stomach. Good job.
+	*goto fire
+*else
+	*set anarchy %+30
+	*set badworld +1
+	Everyone splits off and looks for their own food. Some people find a bunch of berries and roots and are happy, others find nothing, and a bunch of people end up eating poisonous berries and are miserable for the next few days. Shelter is even worse because though someone finds a shelter big enough for everyone, they don't really want to share it, so everyone else is stuck in their flimsy tents when the storm hits. Hardly anyone is pleased with this outcome but, you know, at least it's their fault and not yours. And, hey, eventually you get the cave owner to let everyone else in. So, there. Leadership.
+	*goto fire
+*label leadfood
+You manage to find a surplus of food by combing through the forest with the rest of the campers.
+You are all very pleased with your finds and are ready to find shelter.
+*page_break.
+Unfortunately, that's when the storm hits, and you were right in your assumption that the tents would
+not be enough to stay dry from the storm. Everyone crams into the few tents you do have, but the rain 
+soaks through and leaves everyone chilled to the bone by morning, and many people now have head colds.
+
+Despite the fact that you now have plenty of food and water, all that your people will remember is
+that you failed in finding them shelter. Though they are only complaining right now, you will need
+to be careful in the future. If you make them too angry or unhappy, they may just decide that you
+are no longer worth keeping around.
+*set control %-10
+*set badworld +1
+*goto fire
+*label goodfood
+Evangeline's group comes back with plenty of berries and roots and even a hatful of honeysuckles,
+enough for everyone to eat however much stew they want.
+
+Warren's group, on the other hand, brings back a bunch of long logs and sticks as shelter.
+
+"What on earth are we supposed to do with this, Warren?"
+
+"Well, we could make a log cabin or something out of it? Maybe teepees. I don't know, ${name}, it's 
+not like there's much out here in the middle of nowhere."
+
+"And yet we've managed just fine before," you say, teeth clenched as you feel the first drops of
+rain indicating the oncoming storm. "Everyone, get in your tents now. Anyone without a tent, join
+someone else's. There's a storm coming and we're just going to have to wear it out thanks to 
+Warren."
+
+But though people are blaming Warren now as they hurry into their tents and grumble, tomorrow, when
+they all wake up with headcolds after enduring a freezing, wet, and sleepless night, they'll all be
+blaming you for poor leadership. 
+
+The next morning you get up and find a huge cave to use as shelter while log cabins are being built,
+but the damage is already done. Though your people are only complaining right now, you will need to 
+be careful in the future. If you make them too angry or unhappy, they may just decide that you are 
+no longer worth keeping around.
+*set control %-10
+*set badworld +1
+*goto fire
+*label goodshelter
+Evangeline manages to find shelter in a giant cave conveniently located under the mountain only 
+half a mile away from the lake. The entrance is obscured by lots of brush and creepers, and you
+have no doubt that Warren and his group would have missed it if they'd been assigned to shelter.
+
+As it happens, Warren and his group reach yours with tons of berries and roots, looking rather
+pleased with themselves. You guide them to the cave and turn on your lantern to inspect your
+findings.
+
+You are about to remark about what a good haul they've brought in when Evangeline says, rather
+frantically, "We can't eat those! They're yew and holly berries!"
+
+You recall a nature book you've once read that listed the side-effects of such berries, and now
+that you think about it, these berries look eerily similar to the ones illustrated.
+
+"Good eye," you say to Evangeline. "How did you even know that?"
+
+"My grandfather used to be a botanist," she said.
+
+You shrug. "Well, half of this is useless then. Go out and find more-" And then you hear the 
+thunder. And see a bright light streak across the sky. "Well, guess we'll have to make do with the 
+roots. I assume those are okay?"
+
+Evangeline nods, and so you start dispersing the food. There isn't enough for everyone to get
+a full meal, but you do what you can. Everyone goes to bed warm and safe from the storm, but all
+they will remember are their empty, growling stomachs. 
+
+The next morning, with Evangeline's help, you find plenty of nonpoisonous berries and fruit, but
+the damage is done. Though your people are only complaining right now, you will need to 
+be careful in the future. If you make them too angry or unhappy, they may just decide that you are 
+no longer worth keeping around.
+*set control %-5
+*set badworld +1
+*goto fire
+*label goodboth
+You ignore the raised hands of the volunteers and say, "Isaac, would you be the leader for food
+gathering, please? And, Agatha, will you please look for shelter?"
+
+Isaac you know to be a smart fellow, if a bit off-putting, and have no doubt he would be a good
+leader if he would only say "yes." Which he does, much to your surprise. As does Agatha, and her
+rather astonishing ability of observation has you all moving your camp to a very well-hidden, large
+cave within half an hour. And Isaac's group brings back plenty of food for everyone. Everyone
+goes to bed safe from the storm outside, with full stomachs and happy thoughts. Well done.
+*set control %+5
+*label leadshelter
+You lead people around looking for shelter first. You manage to find shelter in a large cave
+just as the rain starts coming down outside. After everyone gathers their things and store them
+safely inside the cave, there is not enough time to go out and get food. 
+
+Everyone goes to sleep with empty stomachs, and despite the fact that you kept them safe from the
+storm outside, they couldn't care less with how loud their stomachs are grumbling. 
+Though your people are only complaining right now, you will need to 
+be careful in the future. If you make them too angry or unhappy, they may just decide that you are 
+no longer worth keeping around.
+*set control %-5
+*set badworld +1
+*goto fire
+*label noboth
+You ignore the raised hands of the volunteers and say, "Isaac, would you be the leader for food
+gathering, please? And, Agatha, will you please look for shelter?"
+
+Isaac shakes his head. "I'd rather not."
+
+Agatha looks away, face bright pink.
+
+Well, looks like it's back to square one.
+*goto shelterfood
+*label fire
+*page_break
+After the storm, you realize that you need to get a fire going pronto. The cave is fairly warm on its
+own, but you'll need a fire outside for cooking and extra warmth. However, the forest is completely
+soaked from the storm last night. Starting a fire won't be quite as easy as it usually is, and no 
+one else seems to be in the mood to fix it themselves. Looks like it's up to you.
+
+What do you do?
+*label firechoice
+*choice
+	#Use someone's spectactles to start a fire.
+		*set control %+10	
+		*goto Piggy
+	#Try rubbing a stick to start a fire
+		*goto laughedat
+	*disable_reuse #Give up and admit defeat
+		You couldn't have possibly thought that'd be acceptable. You're their leader for crying out loud! Try again.
+		*goto firechoice
+*label Piggy
+You look around and find an old man with bifocals on, and ask if you can borrow his glasses for a 
+bit. You gather up all the kindling you can find, trying to find the driest pieces you can.
+
+After a few minutes of positioning the glasses to capture the sun, you see a bit of smoke rising
+from the leaves. A few more minutes, and you have flame, albeit a small one. Nevertheless, it's a
+growing fire, and you're rather impressed with yourself.
+
+"Does anyone have a pig?" the Plato man asks as he emerges from the cave.
+
+"Unfortunately, we're all out of two-sided spears at the moment," you say.
+
+A few people laugh heartily at that, while the others who have no idea what's funny laugh along with
+them. It's a pleasant moment, but the joke raises a legitimate question.
+
+"Do you think we should go out hunting for meat, ${name}?"
+*goto huntingchoice
+*label laughedat
+You try to start the fire for nearly an hour with only raw, angry palms to show for it.
+
+Some people start laughing at you miserable attempt. What is your response?
+*fake_choice
+	#Scold them
+		This does pretty much nothing. They just continue laughing, and you have to wait for the kindling to dry before the fire ever starts.
+	#Make a passive aggressive comment
+		*set control %-5
+		*if (intelligence > 60)
+			"Huh, I'm really struggling to make this fire out of wet materials. If only there were competent, intelligent people around that I could ask for help." You look up and make contact with each of them, then turn back to the fire. "Guess I'm fresh out of luck." (They leave you alone after that, and you get the fire started once the kindling dries.)
+			*goto hunt
+		*else
+			"It's a good thing I'm actually working, otherwise I'd look like a bunch of lazy morons." Not exactly a killer burn. The group collectively shrugs at one another and continue laughing. Eventually someone else comes over with flint and starts it for you. You feel like an idiot. 
+			*goto hunt
+	#Work even harder
+		*if (intelligence > 65)
+			You refuse to let a few jerks make you look like an idiot. You're their leader, for goodness' sake! So you think for a minute when an idea strikes you. You go down to the river and dig around for a bit before emerging with two flint pieces. You march back to your fire pit and send sparks flying. After a few minutes, it starts smoking. Success!
+			*goto hunt
+		*else
+			You work even harder at twirling the stick, but after another hour, your hands are completely numb with no so much as a wisp of smoke to show for it. Then someone emerges from the forest and offers you two pieces of rock. Apparently there were flint pieces down by the river. Had you known, you could have saved yourself quite a bit of time and humiliation. The group mocking you laughs even harder.
+			*goto hunt
+	#Laugh with them
+		*if (charisma > 65)
+			When you start laughing at yourself, the others aren't sure what to do at first, but your laugh is infectious, and soon they aren't laughing at you, but with you. One of them offers to help you with the fire, and together you get it started withing minutes. Nice job.
+			*goto hunt			
+		*elseif (humanity > 65)
+			When you start laughing at yourself, the others aren't sure what to do at first, but your laugh is infectious, and soon they aren't laughing at you, but with you. One of them offers to help you with the fire, and together you get it started withing minutes. Nice job.
+			*goto hunt
+		*else
+			Let's be real, that laughter was pretty forced, and everyone picked up on it. The group just looks at you like you have two heads, and proceeds to snicker and walk away. Well that's one way to get rid of them, I guess.
+			*goto hunt
+*label hunt
+*page_break
+Around the campfire that night, one of the newcomers asks, "Are we going to hunt?
+I bet there are tons of animals in the forest that we could eat."
+
+"It would certainly save time gathering so many berries and roots. Not to mention I think I speak
+for everyone when I say we're tired of berries and roots."
+
+So, ${name}, do you support this hunting-endeavor?
+*label huntingchoice
+*choice
+	#If people want to hunt, they should hunt. I have better things to do.
+		*set anarchy %+25
+		*goto huntingyes
+	#We should have people assigned to hunt, and whatever they catch will be distributed to the whole camp.
+		*set communism %+25
+		*if (communism > 65)
+			*goto gatheryes
+		*else
+			*set anarchy %+10
+			*goto gatherno
+	#No hunting, things are fine as they are.
+		*set dictatorship %+25
+		Some people don't seem particularly happy about your declaration, but say nothing. A few days later, however, you find them distributing their ill-gotten gains to the general populace.
+		*goto huntingbad
+*label huntingbad
+*page_break
+What do you do?
+*choice
+	#Kick out the offenders
+		People aren't happy that you've kicked people out just because they disagreed with you. In fact, they are so unhappy that they make sure you can never do it again.
+		*goto_scene badanarchy
+	#Relent. They can hunt if it's that important to them.
+		*goto_scene huntingyes
+	#Tell them that you are their leader, and they should respect your decisions.
+		*if (control > 70)
+			You're lucky your people love you.
+			*goto listennow
+		*elseif (charisma > 70)
+			You're lucky you're charismatic.
+			*goto listennow
+		*else
+			*goto_scene badanarchy
+*label listennow
+Though your people disagree with your decision, they can't argue that you aren't a good leader. You
+tell them that you are making your decisions with the group as a whole in mind, and they believe you
+and they believe in you.
+
+Over the course of the next few weeks, there are no more incidents regarding hunting or anything else.
+Everything seems to run smoothly, and it seems you've finally found a steady routine.
+*page_break
+*goto worldcreation
+*label huntingyes
+You allow people to hunt freely. It's not your business what they do in their free time. So you
+turn a blind eye to the people marching off into the woods wearing clay on their faces as 
+camoflauge. Is that chanting you hear off in the distance?
+*label worldcreation
+In any case, you've set the foundation for a new world. Now it's up to you to decide what it becomes
+in the next few years. Based on your previous decisions, the world will shape itself to the mold
+you set.
+
+Would you like to see what you've created?
+*choice
+	#Yes!
+		Great. It wasn't really an option anyways.
+		*if (republic > 30) and (badworld <=3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Thanks to your superb leadership, you are about to create the world you'd hoped for.
+			*goto_scene goodrepublic
+		*elseif (communism > 30) and (badworld <=3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. Thanks to your superb leadership, you are able to create the world you envisioned.
+			*goto_scene goodcommunism
+		*elseif (dictatorship > 30) and (badworld <=3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. Thanks to your superb leadership, you are left in power long after your journey.
+			*goto_scene gooddictatorship
+		*elseif (anarchy > 30) and (badworld <=3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Thanks to your superb leadership, you managed to create your ideal world.
+			*goto_scene goodanarchy
+		*elseif (republic > 30) and (badworld > 3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Unfortunately, some of your choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badrepublic
+		*elseif (communism > 30) and (badworld > 3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. However, some of the choices you made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badcommunism
+		*elseif (dictatorship > 30) and (badworld > 3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. However, you also made some choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene baddictatorship
+		*elseif (anarchy > 30) and (badworld > 3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Unfortunately, some of the choices you've made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badanarchy
+		*else
+			You never had much of an affinity for any type of structure or government, so the world around you dissolves into chaos.
+			*goto_scene badanarchy
+	#No.
+		Too freaking bad.
+		*if (republic > 30) and (badworld <=3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Thanks to your superb leadership, you are about to create the world you'd hoped for.
+			*goto_scene goodrepublic
+		*elseif (communism > 30) and (badworld <=3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. Thanks to your superb leadership, you are able to create the world you envisioned.
+			*goto_scene goodcommunism
+		*elseif (dictatorship > 30) and (badworld <=3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. Thanks to your superb leadership, you are left in power long after your journey.
+			*goto_scene gooddictatorship
+		*elseif (anarchy > 30) and (badworld <=3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Thanks to your superb leadership, you managed to create your ideal world.
+			*goto_scene goodanarchy
+		*elseif (republic > 30) and (badworld > 3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Unfortunately, some of your choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badrepublic
+		*elseif (communism > 30) and (badworld > 3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. However, some of the choices you made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badcommunism
+		*elseif (dictatorship > 30) and (badworld > 3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. However, you also made some choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene baddictatorship
+		*elseif (anarchy > 30) and (badworld > 3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Unfortunately, some of the choices you've made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badanarchy
+		*else
+			You never had much of an affinity for any type of structure or government, so the world around you dissolves into chaos.
+			*goto_scene badanarchy
+
+*label gatherno
+You assign volunteers and the best potential hunters you have to go out and hunt for food during the
+day. The rest of your people are assigned to other important tasks, like gathering firewood, 
+cooking food, collecting berries, etc.
+
+However, pretty soon people start complaining about the roles they have versus everyone else. This
+person wants this role, another wants theirs, and rather than being able to switch seamlessly, you
+have another person who doesn't want to give up their job because they like it and it's easy. Which,
+coincidently, is why everyone else wants them to give it up.
+
+You work hard over the next few weeks to settle everyone into new jobs that they can tolerate, and
+try to make sure everyone is doing their part. It's a difficult task, but you do your best.
+*page_break
+*goto worldcreation
+*label gatheryes
+You assign volunteers and the best potential hunters you have to go out and hunt for food during the
+day. The rest of your people are assigned to other important tasks, like gathering firewood, 
+cooking food, collecting berries, etc.
+
+Though a few people complain about their roles and how they want to be doing something else, overall
+everyone is happy to do their part for the community.
+
+There are no more incidents over the course of the next few weeks, and pretty soon you feel as though
+you and your people have entered into somewhat of a rhythm for your new life. 
+*page_break
+*goto worldcreation
+
+
+

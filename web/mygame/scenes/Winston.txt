@@ -1,0 +1,22 @@
+*page_break
+*achieve bigbrother
+The world of technology opened infinite possibilities for the shaping of your
+community, so it's no wonder you made it such an integral part of everyone's 
+lives. From the TVs fitted with microphone systems to massive camera grid
+that can see literally every corner of your city. 
+
+Nothing gets past you, not even a thought, and it helps to have people big and
+small around to make sure nobody falls through the cracks.
+
+Of course, some people think that with you controlling every aspect of the 
+city, you are going a bit too far into the realm of totalitarianism. But to 
+that you say, "2+2=5"
+
+Anyone who argues with that is just asking to be sent to your brand-spanking-new
+Room 101. 
+
+Anyone who even thinks there's something wrong with that [i]will[/i] be sent
+to the brand-spanking-new Room 101.
+
+After all, you're Big Brother now. And everyone loves Big Brother. Or they will.
+*goto_scene ending

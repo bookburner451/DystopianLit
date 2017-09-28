@@ -1,0 +1,16 @@
+*page_break
+The next few years go by in the blink of an eye as you enjoy your position
+as leader of the new world. It doesn't matter if people are debating the future
+of automated cars or where someone's property line ends to mow the lawn, you
+have the final say in everything.
+
+It's a good thing you're a good person, otherwise your entire society would
+be built on a corrupt foundation.
+
+Seriously, though, the years pass by smoothly as everyone remains relatively 
+happy. You're a good leader, and you never impose on anyone's rights,
+human, lawful, and anything in between, and as a result your people love you.
+
+Even after your death, your name lives on in memory as the person who 
+changed the world for the better.
+*goto_scene ending

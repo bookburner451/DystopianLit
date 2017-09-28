@@ -1,0 +1,563 @@
+*temp tech 0
+Everyone packs up and heads over to the abandoned mirror factory about ten miles from camp. You remembered
+Plato man talking about it during your first weeks at camp, but word of mouth didn't quite capture just 
+how... abandoned it looked. The factory itself was made with all kinds of abstract shapes, with a gorgeous
+dome over the top of it all. Even in the dim moonlight, the walls of the factory seemed to glow with light,
+not having lost any its beauty with time.
+
+The rest of the town, however, looked like everyone in it suddenly abandoned ship. You have no idea what
+could have happened to make people leave in such a hurry, but at least you get to profit from their 
+haste.
+
+You set people to work looting all the houses for supplies. You tell them that any supplies
+*fake_choice
+	#Will be brought back and put into a common circle in the factory, to be dispersed as needed.
+		*set communism %+20
+		Everyone brings the supplies back to the center, where you put them in a secure stockpile in the factory, where you've taken up residence. Whenever people need supplies, they come to you, and you ration them out fairly.
+	#Are theirs to keep. Finder's keepers and all that.
+		*set anarchy %+20
+		Some people manage to find a horde of supplies for them to use, while others end up with next to nothing. But, such is life, what can you do. You're only their leader.
+	#Will be brought to me. I will take what I need and disperse the rest to the populace.
+		*set dictatorship %+20
+		Everyone brings back a rather impressive haul. You take a generous amount of supplies: alcohol, clean sheets, a king-size mattress, plenty of surprisingly well-kept, finely-made clothes. You take what you need and then some, and give the rest out to the general populace. They have a rather measly supply for themselves, but what can they do? You are their leader, after all.
+	#Will be brought back to the factory where the camp will decide as a whole who gets what and when.
+		*set republic %+20
+		Everyone brings the supplies back to the factory, and when you are all present, you put the distribution to a vote. Everyone agrees that it should be a need-only basis, which you will verify so as to prevent abuse. (A check which will not be necessary because everyone is fair and takes only what they need.)
+*page_break
+Though general supplies are covered, you now have to worry about food. Some people managed to find 
+stockpiles of canned goods, but those were few and far between, and they can only last for a couple of
+days at most, and that requires quite a bit of rationing.
+
+Your people turn to you for advice. You find yourself wondering how you managed to be put in this 
+position in the first place, given your only real skill is being able to recite tons of books, but that
+is neither here nor there. You need to figure out how to get your people food.
+
+*label findfood
+What do you do?
+*fake_choice
+	#Send gatherers out to find plants and roots to eat.
+		*if (intelligence > 60)
+			The gatherers, per your suggestion, come back with entire plants, roots and all. You start a community garden of sorts with all the plants you've found, and people with botanical history agree to take care of the plants. You now have a renewable food source. Well done.
+			*goto basicneeds
+		*else
+			The gatherers come back with a good bit of food to be dispersed, but having to send them out every day gets to be tedious. Eventually people get fed up and just set up a community garden, one that people can take care of and harvest enough for even the winter time. You now have a renewable food source, but it doesn't look great that you're not the one who came up with it.
+			*set badworld +1
+			*goto basicneeds
+	#There's an engineer at camp. Perhaps she can help repurpose the factory to make food for us.
+		*set techy %+30
+		*set tech 1
+		You ask Leah, a former engineer, to take a look at the mirror factory and see if there is a way to repurpose the mirror makers to produce food. She inspects the place and finds that since the mirrors are all duplicated from the same small piece of glass, with a single grain of food, she can duplicate it as many times as needed. Unlimited food! Nice job.
+	*disable_reuse #Let the people fend for themselves. I never asked to be leader.
+		*set anarchy %+15
+		*set badworld +1
+		Maybe not, but you are still their leader, whether you like it or not. They demand to be led. Try again.
+		*goto findfood
+*label basicneeds
+With all of their basic needs taken care of indefinitely, your people need something to do. They turn to
+the mirrors in the factory for guidance. You leave the first floor of the factory open to everyone, and so
+while some take a mirror home to look at -even though you are sure there are some at their own houses-
+others prefer to come to the factory and stare transfixed at the mirror for prolonged amounts of time.
+
+Plato man remarks around a campfire one night that "We should never forget to look in the mirror."
+
+Some people take this quite to heart, going so far as to participate in rituals, in which herbs are lit
+and waved in front of a mirror while people look into it. The people who don't do this get rather creeped
+out. They want the mirrors taken away.
+
+You notice a marked change in the people who do the mirror rituals. They are all much kinder and calmer to
+the people around them, and just overall seem at ease with themselves. Of course, there are still those
+who have not left the mirrors except to eat, drink, and otherwise tend to themselves. They concern you 
+quite a bit.
+
+What do you do about the mirrors?
+*choice
+	#Get rid of them completely. This new ritual thing scares me with its potential.
+		*goto nocult
+	#Make the mirrors prominent in our new society. The people need something to believe in.
+		*goto mirrorcult
+	#Move the mirrors to one spot in the camp so people can practice their rituals if they wish and avoid them if they don't. A fair compromise.
+		*goto forgotten
+*label nocult
+You and a few selected people who are also wary of the mirror-society thing go out
+one night and destroy all of the mirrors in town. The next morning, when people discover what you've done,
+there is a mixed reaction. Some people commend you for your decision, others scorn you and retreat back to
+their homes, and a few of the more devout people leave in a huff of rage.
+
+Whether your choice was the right one or not, you definitely made some enemies today.
+*set dictatorship %+25
+*set badworld +1
+*set BNW %+25
+*set Orwell %+25
+*set Bradbury %+30
+*goto techdecide
+*label forgotten
+You move the mirrors into one room in the bottom floor of the factory, welcoming anyone to come at anytime 
+they wish to observe the mirrors and do whatever else they wish in that regard. You are commended by both
+sides for your action, though the most devout supporters and fervid disprovers are rather displeased.
+
+For the first few weeks, everything goes splendidly. Everyone who wants to go to see the mirrors does, and
+the rest are allowed to live in blissful ignorance.
+
+However, eventually people who regularly went to the mirrors gradually found they didn't really have time 
+anymore, in the interest of pursuing other things. 
+
+Soon, the mirrors are completely forgotten, and you can't help but feel that something important has been
+lost because of it.
+*set BNW %+15
+*set Orwell %+15
+*set Bradbury %+15
+*set republic %+15
+*goto techdecide
+*label mirrorcult
+You yourself begin to popularize the usage of mirrors by participating in the rituals with others. You find
+it really does make you think about your character, as well as giving you something to focus on other
+than the dismal state of the world.
+
+With your endorsement, the mirror ritual gains quite a bit of traction, and soon the most devout followers
+become something of figureheads, going around wearing thick black robes to "block out everything trivial
+in life." 
+
+The members are intense, and the figureheads soon become leaders in their own right, though you are still
+the absolute leader. However, if you were to decide something against them now, they have more than
+enough power to stop you if they so choose. Tread carefully.
+*set badworld +1
+*set anarchy %+15
+*set cult +1
+*label techdecide
+In the weeks following the mirror debacle, Leah Davince, a former engineer, approaches you about a potential
+expansion opportunity.
+"So, ${name}, I've been looking at the tech in the factory and around the town, and I've found that there is
+more than enough here for us to build a massive production line of... something. Pretty much anything. We
+could make new parlor screens, set up a news station or whatever and spread the word that we're here if
+people need us, or we could just go back to basics: air conditioning, washer and dryer, dish washer, etc.
+Or..." she bites back a smile, and trails off.
+
+"Or what?" you ask, raising an eyebrow.
+
+"Robots!" she says. "I'm sure it'd take some time, but I'm sure I could work something out. Robotics was my 
+specialty, before machines made machines for us. Just think of the possibilities!"
+
+You [i] are [/i] thinking of the possibilities. You know Leah can only really focus on one big project at a time,
+so you need to consider your options. What would you like Leah to start building?
+
+*choice
+	#Robots. Definitely robots. Think of all the manual labor we could delegate, and all of the other possibilities of artificial life.
+		*set techy %+35
+		*set badworld +2
+		*goto robots
+	#Let's set up a television station here. That way we can spread out as far as we want, and people can still be in the know.
+		*set techy %+25
+		*set badworld +1
+		*goto tvstation
+	#Stick to basics. We don't need anything spectacular, just enough to make things a little easier for everybody.
+		*set techy %+15
+		*goto basictech
+	#No technology whatsoever. In case you hadn't noticed, things didn't work out so great the last time technology entered our lives.
+		*set techy %-65
+		*goto techless
+*label robots
+Leah gets to work on this giant project immediately, reprogramming all of the machines to mass produce a
+horde of robots according to your specfications.
+
+And what were your specifications?
+*choice
+	#Focus on making strong robots that obey every order. Nothing fancy, just functional.
+		*goto_scene robotwar
+	#Focus on making the robots likable and human-like. We could use the extra labor, but companionship is important, too.
+		Aw, how cute. I'm sure that won't backfire at all.
+		*goto_scene robotrevolutionslave
+	#Focus on making the robots intelligent. They should be able to make informed decisions in order to advance and improve our society.
+		So... sentience. Got it. Oh, no, sorry you mean artificial intelligence. Yeah, that's not quite what you get.
+		*goto_scene robotrevolutionevil
+*label tvstation
+Leah gets straight to work creating a huge number of TV screens that are all hooked up to a network that 
+you control. The day the station goes online, it's up to you what you do with it. 
+
+What will your TV station be used for?
+*choice
+	#Monitoring the people, making sure they are happy and complaisant.
+		*goto_scene Winston
+	#Spreading news about how the world is changing and the things being done. All good things, of course.
+		*goto_scene Winston
+	#Informing people about neccessary things, like ration-changes or incoming storms. Nothing fancy.
+		*set BNW %+20
+		*set Orwell %+30
+		*set Bradbury %+15
+		Right. And I'm sure it's going to stay that way, too.
+		*goto techworldchoice
+*label techworldchoice
+You've set the foundation for a new world. Now it's up to you to decide what it becomes
+in the next few years. Based on your previous decisions, the world will shape itself to the mold
+you set.
+
+Would you like to see what you've created?
+*choice
+	#Yes!
+		Great. It wasn't really an option anyways.
+		*if (tech > 40) and (boldness <=40)
+			*goto_scene Winston
+		*elseif (Orwell > 30)
+			*goto_scene Winston
+		*elseif (BNW > 30)
+			*goto_scene BraveNewWorld
+		*elseif (Bradbury > 30)
+			*goto_scene Fahrenheit
+		*elseif (cult = 1)
+			*goto_scene cultworld
+		*elseif (republic > 25) and (badworld <=3)
+			*goto_scene goodrepublic
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Thanks to your superb leadership, you are about to create the world you'd hoped for.
+		*elseif (communism > 30) and (badworld <=3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. Thanks to your superb leadership, you are able to create the world you envisioned.
+			*goto_scene goodcommunism
+		*elseif (dictatorship > 30) and (badworld <=3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. Thanks to your superb leadership, you are left in power long after your journey.
+			*goto_scene gooddictatorship
+		*elseif (anarchy > 30) and (badworld <=3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Thanks to your superb leadership, you managed to create your ideal world.
+			*goto_scene goodanarchy
+		*elseif (republic > 30) and (badworld > 3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Unfortunately, some of your choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badrepublic
+		*elseif (communism > 30) and (badworld > 3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. However, some of the choices you made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badcommunism
+		*elseif (dictatorship > 30) and (badworld > 3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. However, you also made some choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene baddictatorship
+		*elseif (anarchy > 30) and (badworld > 3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Unfortunately, some of the choices you've made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badanarchy
+		*else
+			You never had much of an affinity for any type of structure or government, so the world around you dissolves into chaos.
+			*goto_scene badanarchy
+	#No.
+		Too freaking bad.
+		*if (tech > 40) and (boldness <=40)
+			*goto_scene Winston
+		*elseif (Orwell > 30)
+			*goto_scene Winston
+		*elseif (BNW > 30)
+			*goto_scene BraveNewWorld
+		*elseif (Bradbury > 30)
+			*goto_scene Fahrenheit
+		*elseif (cult = 1)
+			*goto_scene cultworld
+		*elseif (republic > 25) and (badworld <=3)
+			*goto_scene goodrepublic
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Thanks to your superb leadership, you are about to create the world you'd hoped for.
+		*elseif (communism > 30) and (badworld <=3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. Thanks to your superb leadership, you are able to create the world you envisioned.
+			*goto_scene goodcommunism
+		*elseif (dictatorship > 30) and (badworld <=3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. Thanks to your superb leadership, you are left in power long after your journey.
+			*goto_scene gooddictatorship
+		*elseif (anarchy > 30) and (badworld <=3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Thanks to your superb leadership, you managed to create your ideal world.
+			*goto_scene goodanarchy
+		*elseif (republic > 30) and (badworld > 3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Unfortunately, some of your choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badrepublic
+		*elseif (communism > 30) and (badworld > 3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. However, some of the choices you made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badcommunism
+		*elseif (dictatorship > 30) and (badworld > 3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. However, you also made some choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene baddictatorship
+		*elseif (anarchy > 30) and (badworld > 3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Unfortunately, some of the choices you've made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badanarchy
+		*else
+			You never had much of an affinity for any type of structure or government, so the world around you dissolves into chaos.
+			*goto_scene badanarchy
+		
+*label basictech
+With new heating systems, air conditioning, washers and dryers and everything else, the weeks pass by 
+without a hitch. Everyone is enjoying their new, helpful technology, but after a few more days, people
+start to get a bit... bored. Since everyone has received their tech weeks ago, the factory is ready
+to tackle a new project.
+
+Leah approaches you one day and asks, "So, ${name}, what would you like me to make next?"
+*choice
+	#TV station
+		*goto tvstation
+	#Robots
+		*goto robots
+	#Something... new.
+		*goto dystopia
+	#Nothing, we're good.
+		*set techy %-35
+		*goto basicmad
+*label dystopia
+Leah scrunches her nose in thought. "New, huh? Hmm. I'll have to think on it. Any suggestions?"
+*label rechoicetech
+What do you suggest to Leah?
+*choice
+	#A way to quick populate the community. We might have a functioning society now, but pretty soon we're all going to start dying, and then who will be left?
+		*goto_scene BraveNewWorld
+	#A massive security system that can monitor the entire community all at once. No crime can ever be committed, or even thought about.
+		*goto_scene Winston
+	*disable_reuse #What about a sliver of ice that when put in water reshapes into a completely new form of ice?
+		Leah looks at you with confusion and what you'd guess is a bit of concern. That seems like a job for a chemist, not me.
+		*goto rechoicetech
+		
+*label techless
+*page_break
+*set control %-10
+Quicker than should be possible in a technology-free world, your people find out about your decision,
+and suddenly the same work they've been doing for the past few months has become impossible to do without
+technological support.
+
+People begin to talk about the unfairness of your leadership decision, and they start to wonder how you
+ended up de facto leader in the first place. Sure, you have an incredible knowledge-base from your
+many books, but how does that really help you make informed decisions in this new society?
+
+"Well, I think perhaps we should have a new leader. One who knows what's good for the whole group, not
+someone who acts without thinking."
+
+"Yeah, someone selfless who puts the group as a whole first over themself."
+
+"Or at least someone who takes our own feelings into account."
+
+Sounds like your people are considering a mutiny. What is your response?
+*choice
+	#Relent and allow the production of basic technology to appease them.
+		*set techy %+10
+		*set dictatorship %-15
+		You sanction the production of washers and dryers, air conditioning, etc. The people are much happier with your leadership now.
+		*goto basictech
+	#Let them talk. I'm still their leader. If they want technology so badly, they're going to have to get rid of me or do it themselves.
+		*set badworld +1
+		*set anarchy %+25
+		*set techy %-10
+		Your people just might. For now, they put up with your choices as leader. But in the future... Well, let's see.
+		*achieve backtobasics
+		*goto endingscene
+	*selectable_if (cult = 1) #Ask the Mirror People to back you up and renounce technology.
+		*set techy %-20
+		With the Mirror People going around making a big fuss about the dangers of technology, people are too scared to say anything against them, and thus against you. You manage to keep technology out of the community. Well done.
+		*achieve backtobasics
+		*goto_scene cultworld
+*label basicmad
+*set control %-10
+Leah balks. "Really? You don't think we should make anything else? I mean, just think of the possibilities.
+I could make a television broadcasting channel... portable phones... biometric security devices-"
+
+"Leah," you say, cutting her off. "I think it's best that we stay on the lower end of the technology
+spectrum. We just got out of a world where technology had more impact on people than people did."
+
+"But-"
+
+"Leah, we're done here."
+
+Good for you, sticking it to the poor engineer who's just trying to help. 
+*page_break
+People hear about your outright denial of Leah's next project, and are rather unhappy.
+
+
+"Why does ${name} get to make the decisions around here?"
+
+"Yeah, why don't we get to decide for ourselves if we can have more stuff?"
+
+"I think perhaps ${name} had good intentions. Like preventing a relapse into a dystopian society?"
+
+"Well nobody cares what you think."
+
+
+Your people are not happy about this development. What do you do?
+*choice
+	#Let them talk. This decision is for their benefit, and hopefully they will come to realize it in come.
+		They won't. You do realize that even though they've adapted to life without electronics, that doesn't mean they don't want them back, right? Though you are still their leader, some of their respect for you diminishes over time. Hopefully you can recover from that.
+		*set control %-15
+		*set dictatorship %+10
+		*set techy %-10
+		*goto endingscene
+	#Relent. If they want technology so badly, they can have it. It's their funeral, I suppose.
+		*set republic %+15
+		*set anarchy %+15
+		*set techy %+20
+		*goto maketech
+	*selectable_if (cult = 1) #Ask the Mirror People to back you up and renounce advanced technology.
+		*set techy %-15
+		With the Mirror People going around making a big fuss about the dangers of technology. Unfortunately for you, they think all technology is advanced technology, and want everyone to proclaim it evil. Still, with the Mirror People making such a big fuss, people are more concerned with keeping the technology they have than getting more. Well done.
+		*goto_scene cultworld
+*label maketech
+*set techy %+40
+*set anarchy %+15
+Everyone is ecstatic about the new tech they can acquire, and Leah wastes no time procuring it.
+Soon, everyone is drowning in new pieces of technology, from the new Conch-Shells everyone walks around
+wearing to the parlor screens with four walls for everyone. No one resents your leadership anymore, mostly 
+because they're too busy doing other things to notice.
+
+You've set the foundation for a new world. Now it's up to you to decide what it becomes
+in the next few years. Based on your previous decisions, the world will shape itself to the mold
+you set.
+
+Would you like to see what you've created?
+*choice
+	#Yes!
+		Great. It wasn't really an option anyways.
+		*if (tech > 40) and (boldness <=40)
+			*goto_scene Winston
+		*elseif (Orwell > 30)
+			*goto_scene Winston
+		*elseif (BNW > 30)
+			*goto_scene BraveNewWorld
+		*elseif (Bradbury > 30)
+			*goto_scene Fahrenheit
+		*elseif (cult = 1)
+			*goto_scene cultworld
+		*elseif (republic > 25) and (badworld <=3)
+			*goto_scene goodrepublic
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Thanks to your superb leadership, you are about to create the world you'd hoped for.
+		*elseif (communism > 30) and (badworld <=3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. Thanks to your superb leadership, you are able to create the world you envisioned.
+			*goto_scene goodcommunism
+		*elseif (dictatorship > 30) and (badworld <=3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. Thanks to your superb leadership, you are left in power long after your journey.
+			*goto_scene gooddictatorship
+		*elseif (anarchy > 30) and (badworld <=3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Thanks to your superb leadership, you managed to create your ideal world.
+			*goto_scene goodanarchy
+		*elseif (republic > 30) and (badworld > 3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Unfortunately, some of your choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badrepublic
+		*elseif (communism > 30) and (badworld > 3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. However, some of the choices you made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badcommunism
+		*elseif (dictatorship > 30) and (badworld > 3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. However, you also made some choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene baddictatorship
+		*elseif (anarchy > 30) and (badworld > 3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Unfortunately, some of the choices you've made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badanarchy
+		*else
+			You never had much of an affinity for any type of structure or government, so the world around you dissolves into chaos.
+			*goto_scene badanarchy
+	#No.
+		Too freaking bad.
+		*if (tech > 40) and (boldness <=40)
+			*goto_scene Winston
+		*elseif (Orwell > 30)
+			*goto_scene Winston
+		*elseif (BNW > 30)
+			*goto_scene BraveNewWorld
+		*elseif (Bradbury > 30)
+			*goto_scene Fahrenheit
+		*elseif (cult = 1)
+			*goto_scene cultworld
+		*elseif (republic > 25) and (badworld <=3)
+			*goto_scene goodrepublic
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Thanks to your superb leadership, you are about to create the world you'd hoped for.
+		*elseif (communism > 30) and (badworld <=3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. Thanks to your superb leadership, you are able to create the world you envisioned.
+			*goto_scene goodcommunism
+		*elseif (dictatorship > 30) and (badworld <=3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. Thanks to your superb leadership, you are left in power long after your journey.
+			*goto_scene gooddictatorship
+		*elseif (anarchy > 30) and (badworld <=3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Thanks to your superb leadership, you managed to create your ideal world.
+			*goto_scene goodanarchy
+		*elseif (republic > 30) and (badworld > 3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Unfortunately, some of your choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badrepublic
+		*elseif (communism > 30) and (badworld > 3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. However, some of the choices you made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badcommunism
+		*elseif (dictatorship > 30) and (badworld > 3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. However, you also made some choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene baddictatorship
+		*elseif (anarchy > 30) and (badworld > 3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Unfortunately, some of the choices you've made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badanarchy
+		*else
+			You never had much of an affinity for any type of structure or government, so the world around you dissolves into chaos.
+			*goto_scene badanarchy
+*label endingscene
+You've set the foundation for a new world. Now it's up to you to decide what it becomes
+in the next few years. Based on your previous decisions, the world will shape itself to the mold
+you set.
+
+Would you like to see what you've created?
+*choice
+	#Yes!
+		Great. It wasn't really an option anyways.
+		*if (cult = 1)
+			*goto_scene cultworld
+		*elseif (republic > 30) and (badworld <=3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Thanks to your superb leadership, you are about to create the world you'd hoped for.
+			*goto_scene goodrepublic
+		*elseif (communism > 30) and (badworld <=3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. Thanks to your superb leadership, you are able to create the world you envisioned.
+			*goto_scene goodcommunism
+		*elseif (dictatorship > 30) and (badworld <=3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. Thanks to your superb leadership, you are left in power long after your journey.
+			*goto_scene gooddictatorship
+		*elseif (anarchy > 30) and (badworld <=3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Thanks to your superb leadership, you managed to create your ideal world.
+			*goto_scene goodanarchy
+		*elseif (republic > 30) and (badworld > 3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Unfortunately, some of your choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badrepublic
+		*elseif (communism > 30) and (badworld > 3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. However, some of the choices you made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badcommunism
+		*elseif (dictatorship > 30) and (badworld > 3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. However, you also made some choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene baddictatorship
+		*elseif (anarchy > 30) and (badworld > 3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Unfortunately, some of the choices you've made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badanarchy
+		*else
+			You never had much of an affinity for any type of structure or government, so the world around you dissolves into chaos.
+			*goto_scene badanarchy
+	#No.
+		Too freaking bad.
+		*if (cult = 1)
+			*goto_scene cultworld
+		*elseif (republic > 30) and (badworld <=3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Thanks to your superb leadership, you are about to create the world you'd hoped for.
+			*goto_scene goodrepublic
+		*elseif (communism > 30) and (badworld <=3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. Thanks to your superb leadership, you are able to create the world you envisioned.
+			*goto_scene goodcommunism
+		*elseif (dictatorship > 30) and (badworld <=3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. Thanks to your superb leadership, you are left in power long after your journey.
+			*goto_scene gooddictatorship
+		*elseif (anarchy > 30) and (badworld <=3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Thanks to your superb leadership, you managed to create your ideal world.
+			*goto_scene goodanarchy
+		*elseif (republic > 30) and (badworld > 3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Unfortunately, some of your choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badrepublic
+		*elseif (communism > 30) and (badworld > 3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. However, some of the choices you made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badcommunism
+		*elseif (dictatorship > 30) and (badworld > 3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. However, you also made some choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene baddictatorship
+		*elseif (anarchy > 30) and (badworld > 3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Unfortunately, some of the choices you've made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badanarchy
+		*else
+			You never had much of an affinity for any type of structure or government, so the world around you dissolves into chaos.
+			*goto_scene badanarchy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

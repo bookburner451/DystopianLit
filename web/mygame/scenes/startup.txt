@@ -1,86 +1,800 @@
-*comment Copyright 2010 by Dan Fabulich.
-*comment 
-*comment Dan Fabulich licenses this file to you under the
-*comment ChoiceScript License, Version 1.0 (the "License"); you may
-*comment not use this file except in compliance with the License. 
-*comment You may obtain a copy of the License at
-*comment 
-*comment  http://www.choiceofgames.com/LICENSE-1.0.txt
-*comment 
-*comment See the License for the specific language governing
-*comment permissions and limitations under the License.
-*comment 
-*comment Unless required by applicable law or agreed to in writing,
-*comment software distributed under the License is distributed on an
-*comment "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
-*comment either express or implied.
+*title Rising From the Ashes
 
-*title My First ChoiceScript Game
-*author Anonymous
+*author Emily Ewing
+
 *scene_list
-  startup
-  animal
-  variables
-  gosub
-  ending
-  death
+	startup
+	uninhabited
+	bombsite
+	Mirror_Factory
+	Winston
+	goodrepublic
+	goodcommunism
+	gooddictatorship
+	goodanarchy
+	badanarchy
+	anarchy_bad
+	badrepublic
+	badcommunism
+	baddictatorship
+	cultworld
+	robotwar
+	robotrevolutionslave
+	robotrevolutionevil
+	BraveNewWorld
+	Fahrenheit
+	huntingyes
+	ending
 
-*create leadership 50
-*create strength 50
+*create wealth 0
+*create humanity 0
+*create intelligence 0
+*create charisma 0
+*create control 50
+*create boldness 50
+*create techy 50
+*create career "Unemployed"
+*create gender "Unspecified"
+*create name "Unknown"
+*create lastname ""
+*create full_name ""
+*create citizenship ""
+*create location "Nomadic"
+*create Granger 0
+*create Faber 0
+*create Ash 0
+*create leader 0
+*create anarchy 0
+*create communism 0
+*create republic 0
+*create dictatorship 0
+*create BNW 0
+*create Orwell 0
+*create Bradbury 0
+*create tricked 0
+*create badworld 0
+*create ninacult 0
+*create cult 0
+*achievement acourageousfreshplanet visible 20 A Courageous Fresh Planet
+	Create a world eerily similar to Aldous Huxley's famous book called... What was it again?
+	Created a world eerily similar to Brave New World
+*achievement backtobasics visible 20 Back to Basics
+	Keep all traces of technology from your community.
+	Kept all traces of technology from your community.
+*achievement squareone visible 15 Square One
+	Make your world exactly like it was before the bomb.
+	Made your world exactly like it was before the bomb.
+*achievement robotrevolution visible 5 Robot Revolution
+	Robots are nasty little buggers.
+	Robots took over the world.
+*achievement bigbrother visible 20 Big Brother
+	You will not be controlled by someone who probably never even existed.
+	You love Big Brother. And you always have. 2+2=5
+*achievement lovelydisease visible 5 Lovely Disease
+	Use someone's ignorance as a means to an end.
+	You told the girl that her crush is a disease. What is this, Lauren Oliver's Delirium?
+*achievement thebard visible 10 The Bard
+	Devote the rest of your life to storytelling.
+	Devoted your life to storytelling.
+*achievement youwroteit visible 15 Legendary
+	You were quite prolific.
+	Made people believe that you wrote everything ever written ever.
+	
+*comment line 36
+The world shone brighter than you ever thought possible. Brighter than all the parlor screens in the
+world, brighter than all the overhead lights, brighter than even the sun. And the heat that explode
+across the town made you flinch, even miles upon miles away from the blast. The smell was the worst,
+though. The smell of death, one that no one could describe but could identify the moment it hit your
+nose, clung to the air as though it were an instant away from being forgotten forever. Like all of
+those people.
 
-Welcome to your very first ChoiceScript game!
+It was over just as soon as it began, the bright, white light that hurt to look at fading away into
+infinite blackness. The moon was now the only source of light against the pitch black of the ground and
+sky. That, and a warm glowing light in the distance. You pick yourself up, vaguely aware of the lack of
+sound in your ears as your feet crunched along the grass -or at least you assumed it did. All you could
+make out was a distance ringing, but you ignored the sensation in favor of focusing on that orange light,
+wondering how in the world you ended up here.
+*page_break
 
-Copyright 2010 by Dan Fabulich.
+How did you end up here? (Note that your choice here will affect your intial skill levels, which 
+impact choices later on)
+*fake_choice
+	#I was a news anchor. When the bomb hit, I was doing a story on the dangers of the outside. We burned trees and stuff to show that it wasn't flame-proof like our city. Guess it was bomb-proof, though.
+		*set humanity 50
+		*set charisma 80
+		*set intelligence 30
+		*set career "News Anchor"
+	#I was one of President Noble's top political advisors. I knew the ins and outs of the system, hiding scandals and such. I found out the bombing was a possibility through one of my foreign sources. Rather than get reamed out by my boss over something that was probably a hoax, I left town to be safe. Now I'm safe.
+		*set humanity 30
+		*set charisma 50
+		*set intelligence 80
+		*set career "Politcal Advisor"
+	#I was a firefighter. But I hated every minute of it. I laid low and did what they asked, but I stole books when I could, smuggling them out of the city when I had the chance, hoping that some day I could get them to a printing press in the abandoned factory town. I was on a smuggling run when the bomb hit.
+		*set humanity 80
+		*set charisma 30
+		*set intelligence 50
+		*set career "Rogue Firefighter"
+*page_break
+I see.
 
-Dan Fabulich licenses this file to you under the
-ChoiceScript License, Version 1.0 (the "License"); you may
-not use this file except in compliance with the License. 
-You may obtain a copy of the License at
+Well, in any case, you keep trudging forward, daring a glance back at the city. When you don't
+turn into a pillar of salt, you look closer at the ruins, the incline giving you a pretty good view.
+The center of the city is a black smudge, nothing could possibly have survived it, alive or otherwise.
+But on the outskirts of the city are huge chunks of debris, and potentially some other salvagable pieces
+of equipment. Potentially worth revisting when you aren't exhaust, hungry, and on the brink of collapse.
+After a small eternity, you get close enough to the orange light to realize that it isn't a mysterious,
+magical light, but a campfire, surrounded by a circle of black shadows. People! Your speed increases
+tenfold as your hope soars.
 
-*link http://www.choiceofgames.com/LICENSE-1.0.txt
+You get close enough to make out some basic features of the dozen or so people at the campfire, and you
+can make out the low rumble of conversation, but nothing distinct at this distance. They are mostly men,
+from what you can tell, and a few glance at you as you get even closer.
 
-See the License for the specific language governing
-permissions and limitations under the License.
+You've reached the circle around the fire, say hello, and stand there waiting for someone to say something.
+Aside from a few unreadable, quick glances, you get nothing, not the slightlest recognition for even
+existing. Instead, someone continues reciting what sounds like a convoluted version of Plato's [/i]
+Republic. [/i] What do you do?
+*fake_choice
+	#Sit down by the fire and warm your hands. I can play this little game, too.
+		*set boldness %-5
+		You get closer to the fire and settle yourself down on the soft grass. The exhaustion you
+		had been ignoring throughout the journey comes over you like a wave, and you slump deeper
+		deeper into the ground with a heavy sigh.
+	#Ask them why they are ignoring you.
+		*set boldness %-10
+		You stand there, looking around at them accusingly and say, "Is there a particular reason
+		you are ignoring me? Or are you just that rude?"
+	#Ignore them right back.
+		*set boldness %-15
+		You smile and say, "What a mysterious fire. Not a person in sight, and yet here it is, warm
+		and bright." You take a seat on one of the logs, right beside the person reciting, so close 
+		you can feel the warmth coming off of his body. You ignore him steadily.
+*page_break
+*set leader 1
+*set location "Reader Camp"
+"You are welcome here." the man previously butchering Plato's prose says finally. 
 
-Unless required by applicable law or agreed to in writing,
-software distributed under the License is distributed on an
-"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
-either express or implied.
+"Am I?" you ask flatly. "It sure didn't seem like it."
+
+"You must forgive us for being cautious. We have among us some people who have had reason to be wary of
+those in the city. But you did not question our reading, as most would. Which suggests you have either
+read before, or are a sympathizer."
+
+You blink.
+
+"Are you well-read?" the man beside you asks, and you turn.
+
+"Reading is illegal," you respond automatically.
+
+"Once, perhaps, but the world has been reborn. There are no rules anymore, except the ones we
+make for ourselves. So, I ask again, are you well-read?"
+
+You take a deep breath as you consider his question. Normally, you would deny your exposure to books,
+especially being so close to people who could oust you and sic the Hound on you. 
+
+A small shiver runs down your spine at the thought.
+
+But the man was right, the world is a clean-slate. It will be whatever you make it. And somehow you know
+there need to be books in it. So you say, "Very."
+
+Some people stare at you more intently at this admission. "Indeed," the man says. "And who have you read?"
+
+"Eliot, Wells, Mallory, Franklin, Twain..." You trail on for a little while before you stop abruptly,
+realizing that everyone is now watching you with varying degrees of surprise. You've said too much,
+apparently.
+
+But the man just nods his head, though even he seems a little taken aback. Another man, with black hair and
+a soot-stained, haunted face blurts, "How could you have read so many?"
+
+You look down. "In my line of work, you were exposed to literature as a way to prevent the masses from 
+exposure or desire. But it was more than that. At first, it was about duty, but there's something in the 
+books... Something that's been gone for a long time."
+
+"I thought they were all gone!" the ash-covered man proclaimed. "All we had was bits and pieces, a few great
+works but not an entire library. But you've read them all! How much do you remember?"
+
+You look around at the collection of faces, all readers and rememberers. You'd never shared your gift of
+memory with anyone. Too suspicious in a city of burners. But they were not burners or, at least, not in
+the same way. So you meet each of their curious gazes and say, "Every word."
 
 *page_break
 
-Your majesty, your people are starving in the streets, and threaten revolution.
-Our enemies to the west are weak, but they threaten soon to invade.  What will you do?
+The circle erupts into conversation and inquiries.
+"Have you read Huxley?"
 
+"What about Emerson?"
+
+"Shakespeare?!"
+
+You nod in affirmation at all of them, and eventually the chatter dies down when someone asks, "Will you
+read one now?"
+
+"Perhaps," the Plato man drawled, "Instead of bombarding our newest member with requests, we should learn
+their name. At the very least," he said with a small, reassuring smile in your direction.
+
+So you are officially part of their camp now. That's suits you just fine; you had no idea how you were
+going to survive out here without their help. You open your mouth to speak, but close it quickly. Now 
+that you've started this new chapter of your life, you have the chance to completely start over, new name
+included. 
+*page_break
+What is your name, then?
+*label names
+And your name is
 *choice
-  #Make pre-emptive war on the western lands.
-    If you can seize their territory, your kingdom will flourish.  But your army's
-    morale is low and the kingdom's armory is empty.  How will you win the war?
-    *choice
-      #Drive the peasants like slaves; if we work hard enough, we'll win.
-        Unfortunately, morale doesn't work like that.  Your army soon turns against you
-        and the kingdom falls to the western barbarians.
-        *finish
-      #Appoint charismatic knights and give them land, peasants, and resources.
-        Your majesty's people are eminently resourceful.  Your knights win the day,
-        but take care: they may soon demand a convention of parliament.
-        *finish
-      #Steal food and weapons from the enemy in the dead of night.
-        A cunning plan.  Soon your army is a match for the westerners; they choose
-        not to invade for now, but how long can your majesty postpone the inevitable?
-        *finish
-  #Beat swords to plowshares and trade food to the westerners for protection.
-    The westerners have you at the point of a sword.  They demand unfair terms
-    from you.
-    *choice
-      #Accept the terms for now.
-        Eventually, the barbarian westerners conquer you anyway, destroying their
-        bread basket, and the entire region starves.
-        *finish
-      #Threaten to salt our fields if they don't offer better terms.
-        They blink.  Your majesty gets a fair price for wheat.
-        *finish
-  #Abdicate the throne. I have clearly mismanaged this kingdom!
-    The kingdom descends into chaos, but you manage to escape with your own hide.
-    Perhaps in time you can return to restore order to this fair land.
-    *finish
+	#Darcy.
+		*set name "Darcy"
+		*goto names2
+	#Emery.
+		*set name "Emery"
+		*goto names2
+	#Phoenix.
+		*set name "Phoenix"
+		*goto names2
+	#None of these
+		Well, alright then.
+		*label input_name
+		What is your name?
+		*input_text name
+		*comment check capitalization
+		*if ("${name}" != "$!{name}")
+			$!{name}, is that right?
+			*choice
+				#Yes.
+					*set name "$!{name}"
+					*goto names2
+				#No, my name is ${name}.
+					*goto names2
+				#Wait, I changed my mind!
+					*goto input_name
+And what is your last name?
+*label names2
+*choice
+	#Cooper.
+		*set lastname "Cooper"
+		*goto storytime
+	#Foster.
+		*set lastname "Foster"
+		*goto storytime
+	#Gray.
+		*set lastname "Gray"
+		*goto storytime
+	#None of these.
+		*label input_lastname
+		What's your last name, then?
+		*input_text lastname
+		
+		*comment check capitalization
+		*if ("${lastname}" != "$!{lastname}")
+
+			So $!{lastname} is your last name, correct?
+
+			*choice
+				#Yes.
+					*set name "$!{lastname}"
+					*goto storytime
+				#No, my name is ${lastname}, just as I said.
+					*goto storytime
+				#Wait, I messed up!
+					*goto input_lastname
+		*else
+			goto storytime
+
+*comment Add the name coding from home. It works like a charm.
+*label storytime
+*page_break
+Everyone considers this thoughtfully for a moment before someone asks, "Now will you read to us?"
+
+You can't very well deny them, can you? (Choose wisely. You might find your actions, no matter how
+small, have an impact on yourself, the people around you, and even the future of the world.)
+*choice
+	#I'll recite Emerson's Self-Reliance. The beauty of his prose along with his clear, if not quite concise message about being true to oneself is inspiring. One should always be aware of their own actions, and choose for themselves, not the world's approval.
+		*set anarchy 20
+		*set republic 20
+		*set boldness %-10
+		*goto Emerson
+	#I'll choose Huxley's Brave New World. It's a cautionary tale about a world once so similar to ours, and it's important for everyone to remember what life once was. And, even though some parts were obviously dysfunctional, perhaps it sets a base for a utopia in the future.
+		*set communism 20
+		*set BNW 1
+		*set techy %+5
+		*goto Huxley
+	#I'll choose Shakespeare's Julius Caesar. A tale about an ambitious man who goes too far and gets himself killed by his supposed friends. Definitely gives everyone something to consider. Perhaps something to improve upon.
+		*set dictatorship 20
+		*goto Caesar
+	#Umm, I'm pretty sure I can deny them. And I'm totally going to.
+		Why?
+		*goto desire
+*label desire
+*choice
+	#Because it'll make them crave it more. A desire I can use for my benefit later on.
+		Rather devious of you.
+		*set boldness %+15
+		*set badworld +1
+		*goto sleep
+	#Honestly, I'm rather tired. As much as I want to indulge them, I need to think of my own needs first.
+		*set anarchy %+10
+		*goto sleep
+
+*label Emerson
+You launch effortlessly into Self-Reliance's gorgeous prose, with each word getting more and more
+emotional and raw and meaningful. By the end of it, everyone is silent, though you suspect it's from
+emotional speechlessness than apathy.
+
+"I used to be a farmer," someone says quietly. "Before everything was industrialized. I wanted to live
+of the fatta the land," he laughed a little, and some people smiled ruefully. "It was quiet, out in the 
+country. I used to take books and go lay out inthe sunshine and read. The only sounds I heard were my breathing and the sound of the paper crinkling
+as I turned the page I haven't been around that much silence in thirty years. It was beautiful." His
+voice cracked on the last word.
+
+"I was an artist. A real artist, not the meaningless, abstract stuff you see in museums now. Saw, I mean.
+No, what I painted was real. I painted everything just as I saw it. I wasn't going for pretty, or happy,
+or depressing, or colorful. Just real. Books were a different kind of painting, and they were the truth
+I tried to reflect in my own art. Now I have no paint, no medium. But I can't stop seeing what's real."
+
+"I was a writer," someone says. "I should have burned with my books."
+
+It was silent for a long time. No one could break through it. Until you realized you were expected to. So
+you breath deeply and say, "We'll get them back. Your dreams, the beauty of the world. We'll get it back."
+*set humanity %+25
+*goto nextday
+
+*label Huxley
+You recall Brave New World perfect and exactly, inflection in just the right places, and even do different
+voices for all of the characters -especially helpful when it goes back and forth between three conversations
+at once. Your audience is captivated, and when you finally finish, no one seeming to mind you've read the 
+entire night, there is silence.
+
+"A rather depressing novel, given the world we just ended."
+
+"Perhaps, but should we use it as an example? Or a warning? Not all of the world was bad. Everyone was
+happy."
+
+"They were content, not happy."
+
+"What's the difference?"
+
+"The difference is that any animal can be content. Only beings with intelligent thought are capable of true
+happiness, and it was taken from them in favor of peace."
+
+"Given that the world was just destroyed from a war, is choosing peace over intelligent thought really such
+a bad thing?"
+
+"Yes!"
+
+"No!"
+
+"It's not like everyone was stupid and helpless. There were different classes. It was by chance that people
+were born intelligent. Just like it is now."
+
+"No, it was based on a mass-production line where only a certain number of fetuses were given the chance
+to thrive, while the others were purposefully handicapped!"
+
+The debate continues for another few hours, right until the sun is fully in the sky and everyone struggles
+to keep their eyes open. Looks like you will have the final word. What will it be?
+*choice
+	#If Brave New World is an example of a utopia, then I think I prefer dystopia.
+		Everyone laughs at that, smiling as they ready their tents for sleep. Luckily, they have extras with anticipation of others, so you get to sleep in the warmth of your own tent. You go to sleep feeling like you've found somewhere you belong.
+		*set BNW -1
+		*set control %+10
+		*goto nextday
+	#Perhaps the execution was a bit rough, but imagine the possibilities of a world where everyone has a place and is happy with it.
+		Some people nod their heads, others seem to disagree but are too tired to say anything. Still, your point was powerful, and when you are given your tent and get ready for sleep, you feel as though you've found a group of people who will respect you no matter what you say. It's a good feeling to belong.
+		*set BNW +1
+		*set boldness %-10
+		*goto nextday
+*label Caesar
+You tried your hardest to do different voices for each of the characters in Julius Caesar, but when most
+of them are powerful white men it becomes something of a challenge. Of course, there wasn't much to 
+complain about when you were perfectly recalling one of Shakespeare's lost works. But in any case your 
+audience came to the rescue. They started acting out the scenes as you read them. During Caesar's death
+scene, the Plato man got up and started speaking as a few of the others jumped up and mimed stabbing him.
+It was both powerful and amusing at the same time, and with even more of such scenes throughout, you start
+to feel a sense of camaderie.
+
+The night concludes and in the early hours of the morning you finish your tale, and everyone is smiling, if
+tiredly. Someone offers you a spare tent, and you go to bed feeling a true member of the group.
+*set control %-10
+*goto nextday
+*label sleep
+You apologize but say that you are far too tired to recite any stories, knowing full well that it will take
+at least a few hours, hours that you'd rather not lose after a long night of wandering through the
+wilderness. The others say they understand, that there will be other opportunities, etc, etc. You are 
+offered a spare tent, and go to bed soundly, ready for the next day.
+*goto nextday
+*label nextday
+*page_break
+Over the next few days, people continue finding your camp in the night, appparently guided by the fire
+Plato man keeps constantly lit. You learned his name on one of those days, but continue to call him
+Plato anyways. It's kind of a running joke, another sign that you are truly one of the members of this
+camp.
+
+How does it feel to be part of this camp?
+*fake_choice
+	#Nice. I like the sense of community.
+	#It is what it is. It's just a place to live for the time being. Until something better comes along.
+	#Not a fan of the disorganized feel of it all. Sure, everyone pitches in, but who's call the shots?
+		Would you like to be 'calling the shots'?
+		*fake_choice
+			#Maybe.
+			#No. I just want things to be organized!
+			#Obviously. Who better?
+I see.
+
+Well, in any case, you are settled into the camp, watching as new people stumble around the place as 
+veteran members try to direct them to tasks while also completing their own. It's actually a rather
+endearing and amusing sight.
+
+You yourself have primarily focused on
+*choice
+	#Helping by making food, tending to the fire, etc. It's not fun work, but I'm happy to take one for the team
+		*set humanity %+15
+		*goto Mead
+	#Talking to all the different people at camp and listening to them recite books you don't know.
+		*set intelligence %+15
+		*goto Faber
+	#Working with the newcomers to get them better settled into camp. As cute as their fumbling is, I would want someone to help me in that position.
+		*set charisma %+15
+		*goto Phelps
+*label Mead
+You start by making dinner with the supplies you have available, which are mostly a variety of 
+wildberries and roots. Luckily you manage to scrape together enough greens to make a decent salad
+for everyone. Everyone eats and chats happily around the campfire, and when they all leave for bed,
+you stay to tend to the fire.
+
+A few hours into your shift, when you start to drift off, you are approached by an older man with
+a kind countenance. "May I sit?" he asks.
+
+You nod, and he takes a seat on the log beside yours. "A fine evening," he says. "Absolutely
+beautiful."
+
+You smile in agreement. "Now that the city is destroyed, and the lights are gone, you can see all
+the stars."
+
+"A steep price to pay," he says solemnly. You both sit in silence for a while, enjoying the 
+crackling of the fire and the rich smell of smoke.
+
+"Did you ever look at the stars? Before the world ended?" he asks, breaking the peaceful silence.
+
+You shake your head.
+
+"Me neither. I preferred to stare at the ground. The houses, the leaves, the sidewalk. But even that
+was a rarity back then. Ah, but how I wished I would have appreciated the stars more."
+
+"You still can," you say. "It's not too late."
+
+"Not for me, perhaps, but for the people I love. They deserved to see the stars. Now they'll never
+have the chance."
+
+You aren't sure what to say to that. You didn't really leave anyone behind. No one that really
+mattered, anyways. But luckily you're saved by the man himself. "I'll take the next watch. You 
+should get some sleep."
+
+"I'm not sure I can sleep."
+
+"Whenever I find sleep elusive, I take a walk. It calms the nerves, I think."
+
+You smile. "I'll keep that in mind."
+
+With that, you bid the man goodnight and go to your tent. Despite your previous notions, you fall
+to sleep almost-instantly.
+*page_break
+*goto advice
+*label Faber
+You sit around the campfire long after every meal, listening to people recite stories, most of which
+you already heard, which makes it rather depressing when you hear people botch the prose so
+spectacularly. But one night, one of the newcomers starts reciting something you'd never heard
+before:
+"In the beginning God created the heaven and the earth.
+
+And the earth was without form, and void; and darkness was upon the face of the deep. 
+And the Spirit of God moved upon the face of the waters.
+
+And God said, Let there be light: and there was light.
+And God saw the light, that it was good: and God divided the light from the darkness.
+
+And God called the light Day, and the darkness he called Night. And the evening and the morning 
+were the first day.
+
+And God said, Let there be a firmament in the midst of the waters, and let it divide the waters 
+from the waters..."
+
+You listen, entranced by this new piece. You know it is probably from the Bible, the one great
+piece you'd never managed to get your hands on, and here was this old man who just wandered in here
+reciting it. The world is a strange, beautiful place...
+
+He suddenly stopped in the middle of a phrase, "So God created man in... I'm afraid that's all that 
+I have."
+
+Most people call it a night, then, skulking off to their tents with varying degrees of both 
+pleasure and disappointment.
+
+You, however, approach the old man and ask, "Where did you get ahold of the Bible?"
+
+The old man shook his head. "I didn't. A friend acquired it, and I was lucky enough to read a few 
+pages before it was destroyed."
+
+"Destroyed?" you say, your face falling. 
+
+He nods solemnly. "I was on a subway out of the city when the bombs hit. I survived the aftershock,
+but the train and the books I carried were not so lucky."
+
+"So you don't remember anymore?"
+
+He smiles faintly. "Not of Genesis, but I skimmed through a good number of chapters on the train ride.
+Given time, I'm sure I can remember more."
+
+You grin, and both of you begin discussing the common books you share, talking into the wee hours
+of the night. When it is finally time to retire, you do so feeling like your mind is freer than
+it has ever been.
+*page_break
+*goto advice
+*label Phelps
+Over the course of the next few days, you meet and help quite a few people settle into the camp, but
+one woman stood out to you in particular...
+
+She is pleasant enough woman, pretty, too, with dark eyes and hair, and a pale, thin face. Quiet,
+but she had a way about her, as though she could see the world for what it was and hated her gift.
+
+Naturally, you are too curious to resist. "Can I ask how you managed to escape the city?"
+
+The woman blushes. "I, um, I was riding the subway train."
+
+You raise an eyebrow. Why was that embarrassing? "Who were you visiting?"
+
+She got a faraway look in her eye. "My family. They had recently moved out of the city. They thought
+it wasn't a good place to live anymore, so they packed up and left. Not that I cared, of course."
+
+"Of course."
+
+"But, I figured I should visit simply to see their parlor screen. Make sure it was up and running, I
+suppose. If anyone would have put off setting up a parlor screen, it'd be my family," she laughed
+an exasperated laugh.
+
+"What made them so different?" you ask.
+
+"I'm sure many specialists have asked that question. In fact, I know they have. They've all been
+arrested at one point or another."
+
+"I see. And so you didn't want to be a part of it."
+
+"Of course not! I didn't want to be so improper and antisocial. So I did the proper thing and got
+married, and when my husband died, I got married again and so on."
+
+"What made you come here, then? If you hate reading and impropriety so much, why stay at a camp of
+readers?"
+
+She considers this for a while. "I'd like my parlor screen back. But until then, the only other
+thing I ever wanted was to hear that poem one more time."
+
+"What poem?"
+
+"I don't know, but it was lovely. Completely inappropriate, but lovely. I just want to hear it one
+more time."
+
+The conversation was over after that, as you'd finished settling her into her tent, but her haunted,
+yet empty face was in your nightmares for days after.
+*goto advice
+*label advice
+*page_break
+One night you are sitting at the campfire roasting some mushrooms when a young woman approaches you.
+
+"${name}?" she asks timidly. You motion for her to sit beside you, but she does not move. 
+
+"Would you like to speak somewhere more private?" you ask her gently.
+
+She nods, and you lead her back to your tent, which is a fair distance away from the others. You both go
+inside and sit down, having to lean against the fabric in order to fit across from one another. You turn
+on the electronic lantern that had been gifted to you. Apparently found on a salvaging run at an
+abandoned mirror factory, you use precious lantern very sparingly. But you turn it on out of kindness, and
+the girl smiles sheepishly.
+
+The girl was uncommonly pretty, with long, wavy blonde hair and eyes of the deepest blue they bordered 
+on violet. These eyes were now turned on you, seeking something you couldn't name and weren't sure was
+there to find anyways.
+
+"I'm Nina," she says.
+
+"I know," You say. You'd seen her around camp, along with a rather rambunctious and... shall we say
+vivacious group of friends. They only survived the bombing because they were driving out of the city
+"just for the danger of it" right when the bomb hit. 
+
+Everyone was a little wary to let them into the camp, given that none of them had read a book in their
+life, nor were they receptive to the idea of listening to the stories being recited around the campfire
+at night. "There was more fun to be had at night than that," they would say, or at least some various of
+it. Still, they seemed rather harmless, and nobody had the gumption to kick them out (or a legitimate
+reason, honestly), so here they were.
+
+You shake your head to get out of your reverie. "You wanted to speak in private. Is something wrong?"
+
+She twirls a piece of her hair with her fingers, biting her lip. "No. Yes... I don't know."
+
+You open your mouth to speak, but she quickly says, "It's just sometimes I get these... feelings, you know.
+Like my heart is bouncing out of my chest, or my chest is so tight I can't breathe, or I feel like my 
+stomach is going to explode!"
+
+Huh. "Tell me, Nina. These feelings, are you with your friends when it happens?"
+
+She thinks for a second, and then nods her head. "At least one of them, yeah. It's mostly when I'm with
+Johnny." She pauses, her eyes widening. "You don't think he's making me sick, do you?"
+
+Hmm. Based on multiple readings of Jane Austen novels and common sense, you're pretty sure -actually,
+100 percent sure- that Nina has a crush on her friend Johnny. The question is, what do you do about it?
+*choice
+	#Be honest and explain that it isn't an illness, but rather her feelings towards her friend manifesting physically.
+		*goto Ninahonest
+	#Make Nina believe that she has a serious illness.
+		*goto Ninatrick
+*label Ninatrick
+Good God, why?
+*fake_choice
+	#It'll be easier to understand illness than love.
+		Uh-huh... I mean, she's naive, sure, but this is... Well, you're the expert. I guess
+		*set boldness %+10
+		*set humanity %+5
+		*set badworld +1
+	#It'll be that much easier to control her if she thinks I am the only one who can fix her.
+		Wow. That's... Wow. Okay, if you're sure...
+		*set boldness %+20
+		*set intelligence %+5
+		*set dictatorship %+15
+		*set humanity %-20
+		*set badworld +1
+*page_break
+*achieve lovelydisease
+"Nina, what you are experiencing is a very rare but dangerous disease called (you think about books
+you've read, even the crappy YA ones) [i] Delirium [/i]. It causes you to become obsessively
+attatched to one person for no logical reason. The early symptoms are a perfect match to the one
+you described."
+
+Nina paled under the light of the lantern, her eyes widening so that they might pop out of her head.
+"${name}, what should I do?"
+
+You "consider" this for a moment and say, "Well, most importantly, avoid and ignore this Johnny
+person at all costs. And, if it should seem the symptoms are getting worse, come see me right away."
+
+"Oh, thank you, ${name}! What would I do without your sage wisdom?"
+
+She trots off happily after that, and you are confident that you made the right choice.
+*page_break
+That is, until about a week later, you find out that she has been telling some of her friends about
+the help you gave her regarding her little problem. Luckily, those friends are all malleable, too,
+so they hang onto every word (except John, but Nina's too busy avoiding him for him to notice a 
+problem), but some of the veterans of the camp might overhear, and there's no way they won't realize what you've done.
+
+What will you do?
+*choice
+	#Confess to tricking her.
+		*set humanity %+25
+		*set charisma %-25
+		*set control %-10
+		*set boldness %-20
+		You pull Nina aside and level with her. When she finds out you lied to her, she starts to tear up, and then runs away crying. Still, honesty is the best policy, even if it is a little late. You might have lost some points with the sheep, but the rest of the camp still remains unaware and friendly towards you.
+		*goto nextscene
+	#Tell the girl she should keep her disease a secret, because even though she should be in recovery, she's still infected, which isn't very attractive.
+		*set boldness %+15
+		*set humanity %-10
+		*set charisma %+15
+		*set dictatorship %+15
+		*set ninacult 1
+		Heaven forbid she's not [i]attractive[/i]. Nina takes this potential threat very seriously, and keeps her mouth shut from then on, even going so far as to avoid people to prevent spreading this disease. No one really questions this; they think it's just her way of coping with going from civilized society to being around a bunch of savages. 
+		*goto nextscene
+	#Convince her to leave camp in search of bigger, better things.
+		*set boldness %+20
+		You tell Nina that you are afraid her illness isn't going to get any better by even being near Johnny. So you hint that perhaps she should leave the camp and never look back, wishing her luck at finding happiness literally any place but here. She takes said advice to heart and leaves the next day, leaving behind a number of confused but ultimately unconcerned friends.
+		*goto nextscene
+*label Ninahonest
+You tell Nina that what she is experiencing is simply the result of a natural romantic attachment to her 
+friend, not anything wrong with her.
+
+"Oh," she says, nodding slowly. "Okay. I get it. So what should I do?"
+
+You blink, not sure what say. You take a moment to think, feeling a little conflicted about giving
+relationship advice to someone you barely know. But Nina is waiting expectantly, so you say
+*choice
+	#Nina, I can't tell you what to do about your feelings because they are YOUR feelings. I can give you the knowledge to make an intelligence choice, but it still must ultimately be your own.
+		Nina's brow furrows at first, but realization slowly dawns on her face. "Oh, okay! Thanks, ${name}!"
+		*set charisma %+15
+		*set anarchy %+20
+		*goto nextscene
+	#You should tell him how you feel! The world's ended if you haven't noticed. What better time than to live life to the fullest and take a few risks here and there.
+		Nina grins. "Okay, ${name}, I will!" She practically jumps out of your tent in excitement.
+		*set humanity %+15
+		*set dictatorship %+10
+		*goto nextscene
+	#Try to ignore your feelings. Neither one of you will be prepared for an actual, healthy romantic relationship coming from a world where it was strange to mourn the death of a spouse. Focus on getting settled at camp and doing your part to help, rather than focusing on yourself.
+		*set intelligence %+15
+		*goto Ninasad
+*label Ninasad
+Nina frowns. "Okay. I understand. But will these feelings go away?"
+
+"Yes. It's hard to say when, exactly, but they should eventually fade."
+
+You look at her still-sad countenance and say, "Things will be good, Nina, I promise."
+
+At that, she smiles. "Okay, I believe you. Thanks, ${name}!"
+*goto nextscene
+
+*label nextscene
+She leaves the tent with a smile, and you feel good about the advice you gave. 
+*page_break
+After your encounter with Nina, more people start coming to you with advice about everything, whether it
+be books or people or tasks or purpose.
+
+One person asked whether they should believe the philosophies of Ayn Rand's Atlas Shrugged 
+([i]Hard no [/i]), which was a bit more up your alley than "Should I take up sewing as a hobby?"
+
+First of all, what are you going to sew with? Leaves, twigs, and spiderwebs? We're in the middle
+of a forest. Options are rather limited. But you just say that they'd have to ask around and see
+if anyone has the neccessary materials before committing yourself to a hobby you can't even start.
+
+How do you feel about being the camp's advice guru?
+*fake_choice
+	#If I can help people with random advice, then I don't mind giving it.
+		Why?
+		*fake_choice
+			#I like to help people.
+				*set humanity %+15
+				*goto goodtoknow
+			#I like being in charge.
+				*set dictatorship %+15
+				*goto goodtoknow
+	#It's rather irritating.
+		Why?
+		*fake_choice
+			#They aren't helping themselves by turning to me for all of their problems. They are capable of thinking for themselves, and therefore should.
+				*set republic %+20
+				*goto goodtoknow
+			#Because people are the worst and I'd rather not deal with them.
+				What would you rather be doing?
+				*fake_choice
+					#Reading
+						*set intelligence %+10
+						*goto goodtoknow
+					#Helping around camp. Everyone needs to do their part.
+						*set communism %+20
+						But didn't you just say...? You know what, nevermind.
+						*set humanity %+10
+						*goto goodtoknow
+					#Sleeping
+						Fair enough. I think everyone can relate to that.
+						*set charisma %+15
+						*goto goodtoknow
+			#I don't care, let them do what they want.
+				*set anarchy %+20
+				*goto goodtoknow
+*label goodtoknow
+Good to know.
+*page_break It's getting cramped here.
+A few months later and people are still finding your camp, the bonfire now acting as a beacon
+for any fortunate survivors of the attack. Everyone is meeting around the campfire to discuss the
+now-limited resources. Also, you aren't really sure how people were still surviving 
+on their own given their previous dependence on technology, but that's above your paygrade.
+
+"What do you think, ${name}? What should we do?" Or maybe it's not...
+
+Suddenly, all eyes are on you, pressuring you to voice your opinion on the fate of the camp.
+
+Based on the growing population, you know, just like everyone else, that the camp needs to be moved
+somewhere with more resources to pull from and more space for people to spread out. Not that the
+middle of the forest isn't roomy enough, but you can only spread out so much until it would take
+an hour to get to the person on the outermost edge of camp. That's just plain impractical.
+
+So, the question is, where should you suggest the camp be moved? (Keep in mind that this decision
+will greatly impact the rest of the story and its events, and depending on which place you pick will
+decide your affinity for certain government structures -or lack therof.)
+*label moving
+*choice
+	#Back to the bomb site. Surely there are things on the outskirts of the city that can be salvaged.
+		*set techy %+30
+		*set Orwell %+15
+		*set Bradbury %+30
+		*set BNW %+15
+		*goto_scene bombsite
+	#The abandoned mirror factory town. There should be enough shelter for everyone, and we can use the factory equipment to make new and improved technology
+		*set techy %+65
+		*goto_scene Mirror_Factory
+	#Somewhere uninhabited. We need a completely fresh start. Without it, there's a good chance we'll just revert back to our old world, or a worse one.
+		*set Orwell %-15
+		*set Bradbury %-15
+		*set BNW %-15
+		*set techy %-50
+		*goto_scene uninhabited

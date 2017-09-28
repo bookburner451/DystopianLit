@@ -1,0 +1,166 @@
+*temp rousing 0
+*temp emotions 0
+*temp reasoning 0
+People seem a little put out at the idea of returning to their former homes, but you pitch it not as
+rebuilding, but creating something entirely new and better. That seemed to lift their spirits, and 
+everyone seemed pleasant enough as you arrive at the demolished city. The outskirts of the bomb site had
+more left to salvage than you could have hoped for. There were a bunch of foundations still remaining, and
+large pieces of rubble that could be used for... well, for something, you're sure.
+
+However, that's not really your focus right now, with the giant storm clouds hovering ominously over your 
+party. You need shelter, and those tents aren't going to cut it.
+*label shelterfind
+What do you do?
+*choice
+	*disable_reuse #There's a grate over there that we can use to access the sewers. We can take shelter there until the storm passes.
+		Okay, um, in what world would anyone willingly go into the sewer system of a demolished city. You do realize that the water that usually gets filtered through is now stagnant, making it even worse than usual. You and your camp are barely down there for a few seconds when you all jump up and get out. Time for a new plan.
+		*set control %-15
+		*goto shelterfind
+	#We can look at some of the houses that are a bit more intact. Perhaps we can conjure up shelter from that.
+		You make that sound like a magical feat, but with a bit of elbow grease you and your group manage to find not only a suitable shelter under a mostly intact foundation, but a basement underneath that can fit everyone, if a bit snugly. You all go to sleep sheltered from the storm raging above, and in the morning you can start making more permanent and roomy shelters.
+		*goto morale
+	#Use the surrounding rubble as walls and put blankets over top as roofs. We don't have enough time to worry about good shelter, so functional will have to do.
+		Okay, functional would be great if the tiny, useless hovels you call shelter were, indeed, functional. Unfortunately for you and your camp, they are not, and the rain soaks through the roof in .2 seconds. In the morning, your people aren't happy waking up with head colds after a freezing, wet night.
+		*set badworld +1
+		*goto morale
+*label morale
+The next morning, you and your people get to work building more permanent shelters. But salvaging
+usable parts from the rubble takes time, and every night when you have to retreat to your 
+too-small, temporary abode is another night where your people go to bed less than pleased with
+your leadership and their situation. After a few weeks of slow, grueling labor, your people have a 
+hard time finding a reason to keep going.
+
+How will you bring up morale?
+*choice
+	#Give a rousing speech about the payoff of hard work and sacrifice.
+		*if (charisma > 70)
+			You deliver a powerful speech that stirs your people into action. They find the energy to keep building and with a few more words of encouragement are able to finish the job within two weeks.
+			*goto successfulchoice
+		*else
+			*set rousing 1
+			Your speech, though it had good intentions, did nothing to truly inspire your audience to do anything other than fall asleep. The next few days of work, you notice a significant drop in progress. Then people start saying that they don't want to work anymore, that they'd rather take their chances on their own.
+			*goto unsuccessfulchoice
+	#Appeal to their emotions and tell them this is for the greater good.
+		*if (humanity > 70)
+			You tell your audience that this arduous task isn't just for their sakes, but for the sake of all who will come after them. You are building a new, better world. Of course, it's going to take time to build, but you believe that your people are fully capable of making that sacrifice. Your people love what you said, and work twice as hard with a new, bigger goal in mind. The structures are done within a couple of weeks.
+			*goto supplies
+		*else
+			*set emotions 1
+			You try to tell your people that this is all for a bigger purpose, that the world can be changed by this, but they fail to see how building some houses will somehow lead to a revolution of a city of ashes. Their work rate slows down significantly after that.
+			*goto unsuccessfulchoice
+	#Explain the logic behind building permanent shelters, and how they will positively affect the future of the new city.
+		*set reasoning 1
+		*if (intelligence > 70)
+			You explain to your people the long-term benefits that building these shelters provide, including setting the basis for an entire new city, one that everyone will feel at home in. You present your beliefs logically and clearly, and your people nod their heads in agreement. You may not have inspired passion, but you certaintly convinced them. Progress on the homes increases significantly over the next few days.
+			*goto supplies
+		*else
+			You attempt to convey your thoughts to your people about the benefits of the shelters being built, but are caught off-guard by the need to make a speech, and fumble over your words and struggle to make a coherent argument. You fail miserably at this, and your people are inspired only to work less than they had previously. Progress on building slows notably.
+			*goto unsuccessfulchoice
+*label unsuccessfulchoice
+*page_break
+What will you try now?
+*choice
+	#Give a rousing speech about the payoff of hard work and sacrifice.
+		*if (rousing = 1)
+			Didn't you already try this? Epic failure take two. Your people are pissed and they don't want you leading them anymore. So you aren't.
+			*if (badworld >= 3)
+				*goto_scene badanarchy
+			*else
+				*goto_scene goodanarchy
+		*elseif (charisma > 70)
+			You deliver a powerful speech that stirs your people into action. They find the energy to keep building and with a few more words of encouragement are able to finish the job within two weeks.
+			*goto supplies
+		*else
+			Your speech, though it had good intentions, did nothing to truly inspire your audience to do anything other than fall asleep. The next few days of work, you notice a significant drop in progress. Then people start saying that they don't want to work anymore, that they'd rather take their chances on their own. So they do.
+			*goto_scene badanarchy
+	#Appeal to their emotions and tell them this is for the greater good.
+		*if (emotions = 1)
+			Didn't you already try this? Epic failure take two. Your people are pissed and they don't want you leading them anymore. So you aren't.
+			*if (badworld >= 3)
+				*goto_scene badanarchy
+			*else
+				*goto_scene goodanarchy
+		*if (humanity > 70)
+			You tell your audience that this arduous task isn't just for their sakes, but for the sake of all who will come after them. You are building a new, better world. Of course, it's going to take time to build, but you believe that your people are fully capable of making that sacrifice. Your people love what you said, and work twice as hard with a new, bigger goal in mind. The structures are done within a couple of weeks.
+			*goto supplies
+		*else
+			You try to tell your people that this is all for a bigger purpose, that the world can be changed by this, but they fail to see how building some houses will somehow lead to a revolution of a city of ashes. Their work rate slows down significantly after that. Then they decide your leadership gig just isn't working out for them.
+			*goto_scene badanarchy
+	#Explain the logic behind building permanent shelters, and how they will positively affect the future of the new city.
+		*if (reasoning = 1)
+			Didn't you already try this? Epic failure take two. Your people are pissed and they don't want you leading them anymore. So you aren't.
+			*if (badworld >= 3)
+				*goto_scene badanarchy
+			*else
+				*goto_scene goodanarchy
+		*if (intelligence > 70)
+			You explain to your people the long-term benefits that building these shelters provide, including setting the basis for an entire new city, one that everyone will feel at home in. You present your beliefs logically and clearly, and your people nod their heads in agreement. You may not have inspired passion, but you certaintly convinced them. Progress on the homes increases significantly over the next few days.
+			*goto supplies
+		*else
+			You attempt to convey your thoughts to your people about the benefits of the shelters being built, but are caught off-guard by the need to make a speech, and fumble over your words and struggle to make a coherent argument. You fail miserably at this, and your people are inspired only to work less than they had previously. Progress on building slows notably, and then halts. People decide they no longer want you leading them, and decide to try things out on their own.
+			*goto_scene badanarchy
+*label successfulchoice
+*label supplies
+Once the shelters are built, people begin to settle into a nice routine. Over the next few years, your
+society develops a system of government based on your personal ideology. You are their leader, after all.
+
+Would you like to see what you've created?
+*choice
+	#Yes!
+		Great. It wasn't really an option anyways.
+		*if (republic >20) and (badworld <=3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Thanks to your superb leadership, you are about to create the world you'd hoped for.
+			*goto_scene goodrepublic
+		*elseif (communism > 20) and (badworld <=3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. Thanks to your superb leadership, you are able to create the world you envisioned.
+			*goto_scene goodcommunism
+		*elseif (dictatorship > 20) and (badworld <=3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. Thanks to your superb leadership, you are left in power long after your journey.
+			*goto_scene gooddictatorship
+		*elseif (anarchy > 20) and (badworld <=3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Thanks to your superb leadership, you managed to create your ideal world.
+			*goto_scene goodanarchy
+		*elseif (republic > 20) and (badworld > 3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Unfortunately, some of your choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badrepublic
+		*elseif (communism > 20) and (badworld > 3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. However, some of the choices you made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badcommunism
+		*elseif (dictatorship > 20) and (badworld > 3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. However, you also made some choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene baddictatorship
+		*elseif (anarchy > 20) and (badworld > 3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Unfortunately, some of the choices you've made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badanarchy
+		*else
+			You never had much of an affinity for any type of structure or government, so the world around you dissolves into chaos.
+			*goto_scene badanarchy
+	#No.
+		Too freaking bad.
+		*if (republic > 20) and (badworld <=3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Thanks to your superb leadership, you are about to create the world you'd hoped for.
+			*goto_scene goodrepublic
+		*elseif (communism > 20) and (badworld <=3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. Thanks to your superb leadership, you are able to create the world you envisioned.
+			*goto_scene goodcommunism
+		*elseif (dictatorship > 20) and (badworld <=3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. Thanks to your superb leadership, you are left in power long after your journey.
+			*goto_scene gooddictatorship
+		*elseif (anarchy > 20) and (badworld <=3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Thanks to your superb leadership, you managed to create your ideal world.
+			*goto_scene goodanarchy
+		*elseif (republic > 20) and (badworld > 3)
+			You believed in a world where everyone had a say in the way things were done. You supported freedom of choice, and wanted it reflected in your future government. Unfortunately, some of your choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badrepublic
+		*elseif (communism > 20) and (badworld > 3)
+			You wanted to support a world where everyone can depend on one another for whatever they need, and for everyone to pitch in whatever they had when neccessary. However, some of the choices you made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badcommunism
+		*elseif (dictatorship > 20) and (badworld > 3)
+			You preferred to have control over your surroundings, and ruled over everyone absolutely, knowing you could be depended on to decide what was best for the group as a whole. However, you also made some choices along your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene baddictatorship
+		*elseif (anarchy > 20) and (badworld > 3)
+			You wanted everyone to be able to live for themselves, and that meant not having any kind of structurized government around to hold people back. Unfortunately, some of the choices you've made on your journey encouraged all the traits humanity would be better off leaving alone, like selfishness, deceit, idiocy. Thus, the world decends into chaos.
+			*goto_scene badanarchy
+		*else
+			You never had much of an affinity for any type of structure or government, so the world around you dissolves into chaos.
+			*goto_scene badanarchy

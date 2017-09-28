@@ -1,0 +1,10 @@
+*page_break
+You have set yourself up as the supreme leader of the world, making sure early on that everyone knows who's in 
+charge and just what it means to disobey. Your people follow without question -or at least without the courage to 
+speak out against you. 
+
+The world around you changes, but only as you allow it. Every decision save for what your people should wear in the
+morning is decided for them. It's your perfect utopia. 
+
+Just, you know, not anyone else's.
+*goto_scene ending
